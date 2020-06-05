@@ -1,0 +1,146 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fromClass {
+    width: 550px;
+    margin: 0 0 0 20px;
+}
+
+.container-form {
+    margin: 30px 0;
+}
+
+
+.el-checkbox-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.el-checkbox{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.el-input__inner,
+.el-input {
+    width: 150px;
+}
+
+.el-form-item__content {
+    line-height: unset;
+    margin: 0;
+}
+
+.el-form-item__label {
+    width: 120px;
+}
+
+.addWidth .el-input__inner,
+.el-input {
+    width: 400px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    margin: 55px 30px 0;
+}
+
+.btn .el-button {
+    width: 120px;
+    margin: 0 20px;
+}
+
+.urlHint {
+    font-size: 14px;
+    color: #000000;
+    padding: 5px 0 0 120px;
+}
+
+.urlHint .el-tooltip{
+    color: #666666;
+    cursor: pointer;
+    width: 60px;
+    font-size: 12px;
+}
+
+.themeTemplate .el-input{
+    width: 150px;
+}
+
+/*地图样式*/
+
+.mapmodules {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+
+.mapClass {
+    width: 900px;
+    height: 600px;
+}
+
+#mapView {
+    width: 100%;
+    height: 100%
+}
+
+
+
+
+/*操作说明*/
+.operation-state{
+    margin: 50px 20px;
+    border: 1px solid #999999; 
+    padding: 20px 20px;
+}
+
+.operation-nei{
+    margin: 10px 0 0 40px;
+}
+
+.operation-nei p{
+    font-size: 14px;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 5px;
+}

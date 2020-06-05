@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个性化地图瓦片下载v1.0</title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" /> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz"></script> -->
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=2.0&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz"></script>
+    <!--加载鼠标绘制工具-->
+    <script type="text/javascript"
+        src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+    <script src="./vue.js"></script>
+    <script src="./elementui.js"></script>
+    <link rel="stylesheet" href="./css/elementui.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <div id="container" v-loading="loading" element-loading-text="拼命下载中" element-loading-spinner="el-icon-loading">
+        <div class="container">
+            <div class="fromClass">
+                <el-form ref="form" :model="form" class="container-form">
+                    <el-form-item label="文件夹名称：">
+                        <el-input v-model="form.dir"></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="地图级别：">
+                        <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">
+                            全选
+                        </el-checkbox>
+                        <el-checkbox-group v-model="form.zoomArr" @change="handleCheckedCitiesChange">
+                            <el-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</el-checkbox>
+                        </el-checkbox-group>
+                    </el-form-item>
+
+                    <el-form-item label="地图主题模板：" class="themeTemplate">
+                        <el-select v-model="value" placeholder="请选择" @change="optionsChange">
+                            <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+
+                    <el-form-item label="自定义主题url：">
+                        <el-input class="addWidth" v-model="form.url"></el-input>
+                        <div class="urlHint">
+                            <el-tooltip class="item" effect="dark" :content="content" placement="top">
+                                <p>详情提示</p>
+                            </el-tooltip>
+                        </div>
+                    </el-form-item>
+
+                    <el-form-item label="最小经度：">
+                        <el-input v-model="form.minLng"></el-input>
+                    </el-form-item>
+                    <el-form-item label="最小纬度：">
+                        <el-input v-model="form.minLat"></el-input>
+                    </el-form-item>
+                    <el-form-item label="最大经度：">
+                        <el-input v-model="form.maxLng"></el-input>
+                    </el-form-item>
+                    <el-form-item label="最大维度：">
+                        <el-input v-model="form.maxLat"></el-input>
+                    </el-form-item>
+
+                </el-form>
+                <div class="btn">
+                    <el-button @click="fsWrite">保存</el-button>
+                    <el-button type="primary" @click="downloada">下载</el-button>
+                </div>
+            </div>
+
+            <!--地图模块-->
+            <div class="mapmodules">
+                <div class="mapClass">
+                    <div id="mapView"></div>
+                </div>
+                <!-- <div id="result">
+                <input type="button" value="清除所有覆盖物" @click="clearAll" />
+            </div> -->
+            </div>
+        </div>
+
+        <!--操作提示-->
+        <div class="operation-state">
+            <h3>操作说明：</h3>
+            <div class="operation-nei">
+                <p><span
+                        style="color:red;font-size: 16px;">1.特别注意:每次进行数据更改后，都要先进行保存，再进行瓦片下载。只有保存后，才能下载最新更改的配置数据。如果下载失败或是其他问题，请重启程序,重新下载地图瓦片，请严格按照流程执行。</span>
+                </p>
+                <p>2.创建文件夹名称，文件夹默认保存在程序同一目录下。</p>
+                <p>3.选择地图级别，级别越大，地图越详细，下载瓦片数量越多。级别越小，有时候个性化地图中可能会没有当前级别的瓦片。</p>
+                <p>4.地图主题模板是程序提供的可直接下载的模板，当你选择一个模板后，自定义主题url会自动注入当前模板的url链接。</p>
+                <p>5.如果想自定义地图主题，可以手动填写url链接，url链接可以从打开的在线个性化地图的控制台中找到。具体流程：F12打开控制台，点击NetWork选择Img资源，在显示的图片资源里点击headers中可以找到。本下载器只能下载瓦片类的个性化地图，如果地图资源不是瓦片加载，无法下载。
+                </p>
+                <p>6.最大和最小经纬度可以自行填写，也可以使用地图右上角的框选功能，选择想要下载的区域。左下角有定位功能，可以在地图中找到当前位置。</p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var fs = require('fs');
+    let DownloadMap = require('./downloadImg_v1.js');
+    let download_map = new DownloadMap();
+    const cityOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+    var vm = new Vue({
+        el: "#container",
+        data: {
+            downKaiguan: false,
+            content: "url路径就是在可以在线预览的个性化地图的瓦片url链接，在NetWork里面查看Img资源里的图片请求链接",
+            form: {
+                dir: 'lists',
+                zoomArr: [],
+                // url: 'http://api1.map.bdimg.com/customimage/tile?&x=xval&y=yval&z=zval&udt=20200528&scale=1&ak=17b7Lhnf06x0CMZLI3aYn5ZIdMxfGcyc&customid=dark',
+                url: 'https://api.map.baidu.com/customimage/tile?&x=12646&y=4733&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=normal',
+                minLng: '69.70503',
+                minLat: '12.661264',
+                maxLng: '147.120855',
+                maxLat: '36.350851',
+                zoomList: null
+            },
+            options: [
+                {
+                    value: 'normal',
+                    label: '默认地图样式',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12646&y=4733&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=normal'
+                },
+                {
+                    value: 'light',
+                    label: '清新蓝风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12643&y=4734&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=light'
+                },
+                {
+                    value: 'dark',
+                    label: '黑夜风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12645&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=dark'
+                },
+                {
+                    value: 'redalert',
+                    label: '红色警戒风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=redalert'
+                },
+                {
+                    value: 'googlelite',
+                    label: '精简风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=googlelite'
+                },
+                {
+                    value: 'grassgreen',
+                    label: '自然绿风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=grassgreen'
+                },
+                {
+                    value: 'midnight',
+                    label: '午夜蓝风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=midnight'
+                },
+                {
+                    value: 'pink',
+                    label: '浪漫粉风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=pink'
+                },
+                {
+                    value: 'darkgreen',
+                    label: '青春绿风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=darkgreen'
+                },
+                {
+                    value: 'bluish',
+                    label: '清新蓝绿风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=bluish'
+                },
+                {
+                    value: 'grayscale',
+                    label: '高端灰风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=grayscale'
+                },
+                {
+                    value: 'hardedge',
+                    label: '强边界风格',
+                    urlStyle: 'https://api.map.baidu.com/customimage/tile?&x=12642&y=4731&z=16&udt=20200604&scale=1&ak=6aVb5rCdo5hDYc5DP5a5GGBcjFgUiGGz&customid=hardedge'
+                },
+            ],
+            value: '默认地图样式',
+            checkAll: false,
+            cities: cityOptions,
+            isIndeterminate: true,
+            config: {},
+            map: {},
+            overlays: {},
+            overlaysZo: [],
+            overSwitch: true,
+            loading: false
+        },
+        mounted() {
+            var that = this
+            console.log('that.value', that.value)
+            var map = new BMap.Map('mapView');
+            that.map = map
+            var poi = new BMap.Point(116.307852, 40.057031);
+            map.centerAndZoom(poi, 16); //设置中心点坐标和地图级别
+            map.enableScrollWheelZoom(); //启用鼠标滚动对地图放大缩小
+            map.setMapStyle({ style: that.value });
+
+            console.log(map)
+
+            var navigationControl = new BMap.NavigationControl({
+                // 靠左上角位置
+                anchor: BMAP_ANCHOR_TOP_LEFT,
+                // LARGE类型
+                type: BMAP_NAVIGATION_CONTROL_LARGE,
+                // 启用显示定位
+                enableGeolocation: false
+            });
+            map.addControl(navigationControl);
+            // 添加定位控件
+            var geolocationControl = new BMap.GeolocationControl();
+            geolocationControl.addEventListener("locationSuccess", function (e) {
+                console.log("e", e)
+                // 定位成功事件
+                var address = '';
+                address += e.addressComponent.province;
+                address += e.addressComponent.city;
+                address += e.addressComponent.district;
+                address += e.addressComponent.street;
+                address += e.addressComponent.streetNumber;
+                alert("当前定位地址为：" + address);
+            });
+            geolocationControl.addEventListener("locationError", function (e) {
+                // 定位失败事件
+                alert(e.message);
+            });
+            map.addControl(geolocationControl);
+
+
+            //绘制矩形框
+            var overlays = [];
+            var overlaycomplete = function (e) {
+                overlays.push(e.overlay);
+                that.overlays = overlays
+                that.overlaysZo = e.overlay.zo
+                that.form.minLng = that.overlaysZo[0].lng
+                that.form.minLat = that.overlaysZo[2].lat
+                that.form.maxLng = that.overlaysZo[2].lng
+                that.form.maxLat = that.overlaysZo[0].lat
+                that.clearAll()
+
+            };
+            var styleOptions = {
+                strokeColor: "red", //边线颜色。
+                fillColor: "red", //填充颜色。当参数为空时，圆形将没有填充效果。
+                strokeWeight: 3, //边线的宽度，以像素为单位。
+                strokeOpacity: 0.8, //边线透明度，取值范围0 - 1。
+                fillOpacity: 0.6, //填充的透明度，取值范围0 - 1。
+                strokeStyle: 'solid' //边线的样式，solid或dashed。
+            }
+            //实例化鼠标绘制工具
+            var drawingManager = new BMapLib.DrawingManager(map, {
+                isOpen: false, //是否开启绘制模式
+                enableDrawingTool: true, //是否显示工具栏
+                drawingToolOptions: {
+                    anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+                    offset: new BMap.Size(5, 5), //偏离值
+                    drawingModes: [BMAP_DRAWING_RECTANGLE], //设置只显示画矩形、圆的模式
+                },
+                rectangleOptions: styleOptions //矩形的样式
+            });
+            //添加鼠标绘制工具监听事件，用于获取绘制结果
+            drawingManager.addEventListener('overlaycomplete', overlaycomplete);
+
+
+        },
+        methods: {
+
+            optionsChange() {
+                console.log(this.value)
+                this.map.setMapStyle({ style: this.value.value });
+                this.form.url = this.value.urlStyle
+            },
+
+            //改变地图风格
+            // changeThestyle() {
+            //     this.map.setMapStyle({ style: that.value });
+            // },
+
+            //矩形框绘制完成触发
+            clearAll() {
+                console.log(22)
+                for (let i = 0; i < this.overlays.length - 1; i++) {
+                    console.log('3', this.overlays)
+                    this.map.removeOverlay(this.overlays[i]);
+                }
+                // this.overlays.length = 0
+            },
+
+            handleCheckAllChange(val) {
+                this.form.zoomArr = val ? cityOptions : [];
+                this.isIndeterminate = false;
+            },
+            handleCheckedCitiesChange(value) {
+                let checkedCount = value.length;
+                this.checkAll = checkedCount === this.cities.length;
+                this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
+            },
+
+            replaceParamVal(paramName, replaceWith) {
+                var oUrl = this.form.url.toString();
+                var re = eval('/(' + paramName + '=)([^&]*)/gi');
+                var nUrl = oUrl.replace(re, paramName + '=' + replaceWith);
+                this.form.url = nUrl;
+                console.log(this.form.url)
+            },
+
+            fsWrite() {
+                console.log(this.form)
+                //http://api1.map.bdimg.com/customimage/tile?&x=50694&y=19024&z=18&udt=20200602&scale=1&ak=17b7Lhnf06x0CMZLI3aYn5ZIdMxfGcyc&customid=dark
+                this.replaceParamVal('x', 'xval');
+                this.replaceParamVal('y', 'yval');
+                this.replaceParamVal('z', 'zval');
+
+                if (this.form.dir == '') {
+                    this.$message.error('请填写文件夹名称');
+                    return
+                }
+                if (this.form.zoomArr == '') {
+                    this.$message.error('请选择级别');
+                    return
+                }
+                if (this.form.url == '') {
+                    this.$message.error('请输入下载地图路径');
+                    return
+                }
+                if (this.form.minLng == '') {
+                    this.$message.error('minLng不能为空');
+                    return
+                }
+                if (this.form.minLat == '') {
+                    this.$message.error('minLat');
+                    return
+                }
+                if (this.form.maxLng == '') {
+                    this.$message.error('maxLng');
+                    return
+                }
+                if (this.form.maxLat == '') {
+                    this.$message.error('maxLat');
+                    return
+                }
+                console.log("写入开始。");
+                //获取表单的 各中值
+                this.config = {
+                    dir: this.form.dir,
+                    zoomArr: this.form.zoomArr,
+                    url: this.form.url,
+                    downloadInfo: {
+                        minLng: this.form.minLng,
+                        minLat: this.form.minLat,
+                        maxLng: this.form.maxLng,
+                        maxLat: this.form.maxLat,
+                        zoomList: null
+                    }
+                }
+
+                this.config.downloadInfo.zoomList = this.config.zoomArr.map(zoom => {
+                    return {
+                        z: zoom,
+                        url: this.config.url
+                    }
+                })
+                console.log(this.config)
+
+                // 同步读取
+                var data = fs.writeFileSync('config.js',
+                    `     
+const config = {
+    dir: "./${this.config.dir}",
+    zoomArr: [${this.config.zoomArr}],
+    url: '${this.config.url}',
+    downloadInfo: {
+        minLng: ${this.form.minLng},
+        minLat: ${this.form.minLat},
+        maxLng: ${this.form.maxLng},
+        maxLat: ${this.form.maxLat},
+        zoomList: null,
+    }
+}
+
+config.downloadInfo.zoomList = config.zoomArr.map(zoom => {
+    return {
+        z: zoom,
+        url: config.url
+    }
+})
+module.exports = config
+        `);
+                var writeData1 = fs.readFileSync('config.js', 'utf-8');
+                console.log("同步读取写入的内容1: " + writeData1.toString());
+                window.testFun = this.config; // 方法赋值给window
+                this.downKaiguan = true
+                alert("保存成功")
+                // localStorage.setItem("temp", JSON.stringify(this.config))
+
+
+            },
+
+            downloada() {
+                if (this.downKaiguan == true) {
+                    console.log(this.config)
+                    download_map.bindEvents(this.config);
+                } else {
+                    alert('请先保存，再进行下载')
+                }
+
+            }
+        },
+    })
+</script>
+
+</html>
