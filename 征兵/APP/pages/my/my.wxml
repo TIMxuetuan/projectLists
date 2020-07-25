@@ -1,0 +1,32 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+<!-- <view wx:if="{{!userInfo.m_id}}">
+  <text>请登录</text>
+</view> -->
+  <view class="my-information">
+    <view class="head" >
+      <image src="{{userInfo.avatarUrl}}" class="user-head"></image>
+      <view class="user-name">{{userInfo.nickName}}</view>
+    </view>
+    <view class="jump">
+      <navigator hover-class="navigator-hover" class="item">
+        <text><text class="iconfont icon-iLinkapp-"></text> 手机号</text>
+        <text class="end">{{model.mphone}}</text>
+      </navigator>
+      <navigator hover-class="navigator-hover" class="item">
+        <text><text class="iconfont icon-xingming"></text> 真实姓名</text>
+        <text class='end'>{{model.username}}</text>
+      </navigator>
+       <navigator hover-class="navigator-hover" class="item ">
+        <text><text class="iconfont iconfont1 icon-credentials_icon"></text> 身份证号</text>
+        <text class='end'>{{model.idCard}}</text>
+      </navigator>
+      <navigator url='/pages/password/password' hover-class="navigator-hover" class='item item-has-arrow-right'>
+        <text><text class="iconfont icon-xiugaimima"></text> 修改密码</text>
+      </navigator>
+      <view hover-class="navigator-hover" bindtap='exit' class='item item-has-arrow-right'>
+        <text><text class="iconfont icon-tuichu"></text> 退出登录</text>
+      </view>
+    </view>
+  </view>
+</view>

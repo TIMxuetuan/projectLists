@@ -1,0 +1,52 @@
+<!--pages/login/login.wxml-->
+<view class="head">
+  <view class="jingzhun">
+    <text class="iconfont icon-jingzhun"></text>
+  </view>
+  <view class="head-title">精准征兵大数据辅助决策系统</view>
+
+</view>
+<view class="container">
+  <form bindsubmit="submitForm" bindreset="formReset">
+      <view class="content" wx:if="{{action=='list'}}">
+        <view class='login-ip'>
+          <text class="iconfont icon-xingming1"></text>
+          <input type='text' id="idCard" value="{{idCard}}" placeholder='身份证号' type='idcard' bindinput='bindKeyInput' />
+        </view>
+        <view class='login-ip'>
+          <text class="iconfont icon-iLinkapp-"></text>
+          <input type='text' id="mphone" value="{{mphone}}" placeholder='手机号' type='number' bindinput='bindKeyInput' />
+        </view>
+        <view class='login-ip'>
+          <text class="iconfont  icon-mima"></text>
+          <input password='true' type='text' id="password" value="{{password}}" placeholder='密码' bindinput='bindKeyInput' />
+        </view>
+        <button class="bt" formType="submit" bindgetuserinfo='goReg1' open-type="getUserInfo" hover-class="submit-hover">登录</button>
+      </view>
+
+      <view class="codename" wx:if="{{action=='edit'}}">
+          <view class='login-ip'>
+          <text class="iconfont icon-xingming1"></text>
+          <input type='text' id="idCard" value="{{idCard}}" placeholder='身份证号' type='idcard' bindinput='bindKeyInput' />
+        </view>
+        <view class='login-ip'>
+          <text class="iconfont icon-iLinkapp-"></text>
+          <input type='text' id="mphone" value="{{mphone}}" placeholder='手机号' type='number'bindinput='getPhoneValue' />
+        </view>
+        <view class='login-ip'>
+          <text class="iconfont  icon-mima"></text>
+          <input password='true' type='text' id="vCode" value="{{vCode}}" placeholder='验证码' bindinput='bindKeyInput'  />
+          <button class="from-bt" bindtap='getVerificationCode' disabled="{{disabled}}">{{codename}}</button>
+        </view>
+        <button class="bt" formType="submit" bindgetuserinfo='goRegCode' open-type="getUserInfo" hover-class="submit-hover">登录</button>
+      </view>
+      <view class='login-btn'>
+        
+        <button class="bt bt1" bindgetuserinfo='goReg' open-type="getUserInfo">注册</button>
+        <view class="pass-code">
+            <button class="bt2" type='{{primary}}'data-name="1" bindtap='list'>密码登录</button>
+            <button class="bt2" type='{{coPrimary}}'data-name="2" bindtap='edit'>手机验证码登录</button>
+        </view>
+      </view>
+  </form>
+</view>

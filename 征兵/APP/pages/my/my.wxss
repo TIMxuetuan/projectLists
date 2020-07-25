@@ -1,0 +1,63 @@
+/* pages/my/my.wxss */
+page {
+  background: #f1f1f1;
+}
+
+.my-information {
+  height: 100%;
+  padding: 30rpx 30rpx;
+}
+
+.head {
+  text-align: center;
+  padding: 60rpx 0;
+  margin-bottom: 20rpx;
+  background-color:#fff;
+}
+
+.user-head {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: 1px solid #2e87cd;
+}
+
+.user-name {
+  color: #2e87cd;
+  margin-top: 20rpx;
+  font-size: 20px;
+  margin-bottom: 30rpx;
+}
+
+
+
+.jump {
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  background: #fff;
+}
+
+.item {
+  border-top: #eee solid 1px;
+  height: 134rpx;
+  line-height: 134rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconfont {
+  color: #2e87cd;
+  margin-right: 20rpx;
+  font-size: 46rpx;
+}
+
+
+.iconfont1{
+  font-size:33rpx;
+}
+
+
+
+
+.end{ flex: 1; text-align: right; font-size: 32rpx; color:#000;}

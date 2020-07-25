@@ -1,0 +1,19 @@
+<import src="../we-cropper/we-cropper.wxml" />
+
+<view class="cropper-wrapper">
+	<!-- <view> -->
+	<template is="we-cropper" data="{{...cropperOpt}}" />
+	<cover-view wx:if="{{showView}}" bindtap="centerClick" class="centerModel">
+		<cover-view class="centerClick" style="background-color: #1989fa;">请选择图片</cover-view>
+	</cover-view>
+	<view class="cropper-buttons" style="color: {{cropperOpt.boundStyle.color}}">
+		<view wx:if="{{twoBtnShow}}" class="cropper-buttons">
+			<view class="upload btn" style="background-color: #1989fa;" bindtap="uploadTap">
+				选择图片
+			</view>
+			<view class="getCropperImage btn" style="background-color: {{cropperOpt.boundStyle.color}};" bindtap="getCropperImage">
+				上传图片
+			</view>
+		</view>
+	</view>
+</view>

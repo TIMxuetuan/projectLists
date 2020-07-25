@@ -1,0 +1,7 @@
+.svn
+*.zip
+.idea/*
+node_modules/
+mydoc/
+unpackage/
+unpackage/*

@@ -1,0 +1,19 @@
+/* pages/school/school.wxss */
+.container{padding:30rpx;}
+.from-li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+  border: 1px solid #e4e4e4;
+}
+.input-box input {
+  width:615rpx;
+  padding: 0 16rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: left;
+  font-size:14px;
+}
+.bt{
+  width:100%;
+}

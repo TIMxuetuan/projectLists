@@ -1,0 +1,30 @@
+{
+  "name": "tilemaptool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "downloadImg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "download": "node downloadimg.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Han3Y/tileMapTool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Han3Y/tileMapTool/issues"
+  },
+  "homepage": "https://github.com/Han3Y/tileMapTool#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-es2015": "^7.0.0-beta.53"
+  }
+}

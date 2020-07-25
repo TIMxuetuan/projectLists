@@ -1,0 +1,54 @@
+<!--pages/experience/experience.wxml-->
+<view class="container">
+
+  <view class="border-list">
+
+    <view class="item">
+      <view class='label'>开始时间:</view>
+      <view class='input-box'>
+        <picker mode="date" value="{{model.pi_time_start_me}}" start="{{curDate}}" data-field='pi_time_start_me' bindchange="bindDateChange">
+          <view class="picker">
+            <input placeholder="主要经历开始的时间" value="{{model.pi_time_start_me}}" disabled bindinput='bindKeyInput' />
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>结束时间:</view>
+      <view class='input-box picker-p'>
+        <picker mode="date" value="{{model.pi_time_end_me}}" start="{{curDate}}" data-field='pi_time_end_me' bindchange="bindDateChange">
+          <view class="picker ">
+            <input placeholder="主要经历结束的时间" value="{{model.pi_time_end_me}}" disabled/>
+          </view>
+        </picker>
+        <text class="picker-text " bindtap='pickerTady' data-name="{{index}}">至今</text>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>所在学校:</view>
+      <view class='input-box'>
+        <input id='model.pi_unit_me' name="model.pi_unit_me" placeholder="请填写所在学校" value="{{model.pi_unit_me}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>职业:</view>
+      <view class='input-box'>
+        <input id='model.pi_occupation_me' name="model.pi_occupation_me" placeholder="请填写职业" value="{{model.pi_occupation_me}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>证明人:</view>
+      <view class='input-box'>
+        <input id='model.pi_witness_me' name="model.pi_witness_me" placeholder="请填写证明人" value="{{model.pi_witness_me}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+  </view>
+
+  <view class="exp-button">
+    <button bindtap="onSubmit" class="bt">保存</button>
+  </view>
+</view>

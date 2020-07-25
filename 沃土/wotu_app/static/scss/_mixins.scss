@@ -1,0 +1,9 @@
+/*
+ * _mixins v0.10
+ * 效率大师
+ */
+@mixin placeholder-color($color) {
+  input::-webkit-input-placeholder {
+    color: $color;
+  }
+}

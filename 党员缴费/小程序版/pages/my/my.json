@@ -1,0 +1,16 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-custom": "/common/color-ui/components/cu-custom",
+    "van-button": "/vant/button/index",
+    "van-stepper": "/vant/stepper/index",
+    "van-field": "/vant/field/index",
+    "van-checkbox": "/vant/checkbox/index",
+    "van-cell": "/vant/cell/index",
+    "van-popup": "/vant/popup/index",
+    "van-datetime-picker": "/vant/datetime-picker/index",
+    "van-icon": "/vant/icon/index",
+    "van-dialog": "/vant/dialog/index",
+    "van-toast": "/vant/toast/index"
+  }
+}

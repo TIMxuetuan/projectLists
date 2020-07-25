@@ -1,0 +1,71 @@
+<!--pages/register/register.wxml  registerHeader-->
+<view class="oneViewStyle">
+  <!-- <image class='header-bg' src = '{{urlImg}}'></image> -->
+
+<view class="container">
+  <cu-custom class="header-box" isBack="{{true}}">
+    <view slot="backText" style="color:#ffffff">返回</view>
+    <view slot="content" class="header-text" style="color:#ffffff">修改手机号</view>
+  </cu-custom>
+
+  <!--内容-->
+  <view class="registerContent">
+
+    <!--表单-->
+    <view class="registerFrom">
+      <form class="formContent" catchsubmit="formSubmit" catchreset="formReset">
+        <view class="page-section">
+         <van-cell-group>
+          <van-field
+            readonly
+            model:value="{{userphone}}"
+            clearable
+            label="旧手机号"
+            placeholder="请输入旧手机号"
+            border="{{ false }}"
+            title-width='70px'
+          >
+          </van-field>
+
+           <view class="blackxian"></view>
+
+            <van-field
+            model:value="{{userNewphone}}"
+            clearable
+            label="新手机号"
+            placeholder="请输入新手机号"
+            title-width='70px'
+            border="{{ false }}"
+          >
+          </van-field>
+
+          <view class="blackxian"></view>
+
+          <view class="authCode">
+            <van-field
+              model:value="{{ sms }}"
+              center
+              clearable
+              label="短信验证"
+              placeholder="请输入新手机号的验证码"
+              border="{{ false }}"
+              title-width='70px'
+              use-button-slot>
+              <van-button slot="button" size="small" type="danger" bind:click="sendCode" disabled="{{smsFlag}}">{{sendTime}}</van-button>
+            </van-field>
+          </view>
+
+          
+
+          </van-cell-group>
+        </view>
+      </form>
+    </view>
+
+    <!--注册按钮-->
+    <view style="margin-top:60rpx"><button class="customBtn" bindtap="registerTo">完成</button></view>
+
+  </view>
+</view>
+
+</view>

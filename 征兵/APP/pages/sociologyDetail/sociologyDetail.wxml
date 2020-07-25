@@ -1,0 +1,38 @@
+<include src='../../components/page-loading.wxml'/>
+<view class="container">
+  <view wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="{{item.index}}">
+    <view class='bl-panel'>
+      <view class='panel-title'>
+        <text>主要社会关系成员情况</text>
+        <view class='end'>
+          
+          <text class="end-two"  bindtap="deleClick" data-index="{{item.index}}">删除</text>
+          <text class="end-one" bindtap="editorClick" data-index="{{item.index}}">编辑</text>
+        </view>
+      </view>
+      <view class="li-ends-list">
+        <view class='li' hover-class="navigator-hover">
+          <text class='start'>称谓</text>
+          <view class='end'>{{item.pi_appellation_mm}}</view>
+        </view>
+        <view class='li' hover-class="navigator-hover">
+          <text class='start'>姓名</text>
+          <view class='end'>{{item.pi_fullName_mm}}</view>
+        </view>
+        <view class='li' hover-class="navigator-hover">
+          <text class='start'>身份证号</text>
+          <view class='end'>{{item.pi_IDNumber_mm}}</view>
+        </view>
+        <view class='li' hover-class="navigator-hover">
+          <text class='start'>工作单位及职务</text>
+          <view class='end'>{{item.pi_unitPosition_mm}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='no-data' wx-if="{{!list.length}}">您还没有添加任何主要社会关系成员情况</view>
+  <view>
+    <button class="bt" bindtap='goSociology'>添加一个</button>
+  </view>
+</view>

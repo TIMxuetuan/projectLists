@@ -1,0 +1,88 @@
+/* pages/register/register.wxss */
+page {
+  width: 100%;
+}
+
+.cuIcon-back{
+  color: #ffffff;
+}
+
+.cu-bar .action:first-child>text[class*="cuIcon-"]{
+  margin-right: 0;
+}
+
+.registerHeader{
+  background-color: #E7222C;
+}
+
+.oneViewStyle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.header-bg{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  background-size: cover;
+  height: 100%;
+  /* padding: 20rpx 0; */
+  box-sizing: border-box;
+  width: 100vw;
+  overflow: hidden;
+}
+.cu-custom{
+  background-color: #E7222C;
+}
+
+/*内容*/
+.registerFrom{
+  width: 100%;
+  height: 100%;
+}
+
+.blackxian{
+  width: 100%;
+  height: 1px;
+  background-color: #F0F0F0;
+}
+
+.page-section{
+  /* border-bottom: 1.5px solid #F0F0F0; */
+}
+
+.page-section  .van-cell{
+  padding: 8px 16px;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.authCode .van-button--small{
+  width: 200rpx;
+  border-radius: 20px;
+  /* padding: 0 30rpx; */
+}
+
+/*承诺书样式*/
+.registerLetter{
+  margin: 40rpx auto 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.customBtn{
+  width: 686rpx;
+  background-color: #E7222C;
+  color: #ffffff;
+  height: 90rpx;
+  line-height: 90rpx;
+}

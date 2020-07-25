@@ -1,0 +1,862 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "沃土 - 智能制造",
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏  
+				}
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"app-plus": {
+					"titleNView": false, //禁用原生导航栏  
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/my/edit-password/edit-password",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏  
+				}
+			}
+		},
+		{
+			"path": "pages/work/work",
+			"style": {
+				"navigationBarTitleText": "智能制造"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/member-manage",
+			"style": {
+				"navigationBarTitleText": "人员管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+		},
+		{
+			"path": "pages/work/technology/technology",
+			"style": {
+				"navigationBarTitleText": "技术管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+		},
+		{
+			"path": "pages/work/resource/resource",
+			"style": {
+				"navigationBarTitleText": "资源管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+		},
+		{
+			"path": "pages/work/design/design",
+			"style": {
+				"navigationBarTitleText": "设计管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+		},
+		{
+			"path": "pages/work/production/production",
+			"style": {
+				"navigationBarTitleText": "生产管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+		},
+		{
+			"path": "pages/work/production/material/material",
+			"style": {
+				"navigationBarTitleText": "物料需求计划"
+			}
+		},
+		{
+			"path": "pages/work/production/regulate/regulate",
+			"style": {
+				"navigationBarTitleText": "订单管理",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"type": "menu",
+							"color": "#fff"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/work/production/material/materdails/materdails",
+			"style": {
+				"navigationBarTitleText": "原材料计划"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/stations/stations",
+			"style": {
+				"navigationBarTitleText": "岗位说明"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/stations/detail",
+			"style": {
+				"navigationBarTitleText": "岗位说明详情"
+			}
+		},
+		{
+			"path": "pages/work/logistics/logistics",
+			"style": {
+				"navigationBarTitleText": "物流管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+		},
+		{
+
+			"path": "pages/work/member-manage/daily/daily",
+			"style": {
+				"navigationBarTitleText": "日报",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"text": "\ue653",
+							"color": "#fff",
+							"fontSrc": "/static/nav-icon/rili.ttf"
+						}]
+					}
+				}
+			}
+		},
+		{
+
+			"path": "pages/work/member-manage/mood/mood",
+			"style": {
+				"navigationBarTitleText": "心情",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"text": "\ue653",
+							"color": "#fff",
+							"fontSrc": "/static/nav-icon/rili.ttf"
+						}]
+					}
+				}
+
+			}
+		},
+		{
+
+			"path": "pages/work/member-manage/meeting/meeting",
+			"style": {
+				"navigationBarTitleText": "会议助手",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"text": "\ue654",
+							"color": "#fff",
+							"fontSize":22,
+							"fontSrc": "/static/fonts/iconfont.ttf"
+						}]
+					}
+				}
+
+			}
+		},
+		{
+			"path": "pages/work/member-manage/meeting/details/details",
+			"style": {
+				"navigationBarTitleText": "会议详情"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/care/care",
+			"style": {
+				"navigationBarTitleText": "员工关怀"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/care/wish/wish",
+			"style": {
+				"navigationBarTitleText": "发送祝福"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/meeting/apply/apply",
+			"style": {
+				"navigationBarTitleText": "申请会议"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/report/report",
+			"style": {
+				"navigationBarTitleText": "简报",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"text": "\ue653",
+							"color": "#fff",
+							"fontSrc": "/static/nav-icon/rili.ttf"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/work/member-manage/establish/establish",
+			"style": {
+				"navigationBarTitleText": "组织架构"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/establish/seach/seach",
+			"style": {
+				"navigationBarTitleText": "搜索人员"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/establish/addbumen/addbumen",
+			"style": {
+				"navigationBarTitleText": "添加部门"
+			}
+		},
+		{
+			"path": "pages/work/compile_staff/compile_staff",
+			"style": {
+				"navigationBarTitleText": "编辑员工",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"text": "完成",
+							"fontSize": "16"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/work/message/message",
+			"style": {
+				"navigationBarTitleText": "员工基本信息",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"text": "\ue654",
+							"color": "#fff",
+							"fontSize":22,
+							"fontSrc": "/static/fonts/iconfont.ttf"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/work/message/found/found",
+			"style": {
+				"navigationBarTitleText": "创建群组"
+			}
+		},
+		{
+			"path": "pages/work/message/found/foundcopy/foundcopy",
+			"style": {
+				"navigationBarTitleText": "创建群组"
+			}
+		},
+		{
+			"path": "pages/work/message/found/foundcopy/foundchilder/foundchilder",
+			"style": {
+				"navigationBarTitleText": "创建群"
+			}
+		},
+		{
+			"path": "pages/work/message/found/foundcopy/foundchilder/creation",
+			"style": {
+				"navigationBarTitleText": "创建群"
+			}
+		},
+		{
+			"path": "pages/work/message/found/foundcopy/foundchilder/explain",
+			"style": {
+				"navigationBarTitleText": "岗位说明"
+			}
+		},
+		{
+			"path": "pages/work/service/service",
+			"style": {
+				"navigationBarTitleText": "服务管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+		},
+		{
+			"path": "pages/work/market-manage/market-manage",
+			"style": {
+				"navigationBarTitleText": "销售管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+		},
+		{
+			"path": "pages/work/member-manage/attendance/attendance",
+			"style": {
+				"navigationBarTitleText": "考勤",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+								"float": "right",
+								"text": "\ue653",
+								"color": "#fff",
+								"fontSrc": "/static/nav-icon/rili.ttf"
+							}
+
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/work/member-manage/attendance/map",
+			"style": {
+				"navigationBarTitleText": "地理位置"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/task/task",
+			"style": {
+				"navigationBarTitleText": "任务",
+				"enablePullDownRefresh": false
+			
+			}
+		},
+		{
+			"path": "pages/tabbar-3/tabbar-3",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar-4/tabbar-4",
+			"style": {}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"app-plus": {
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		},
+		{
+			"path": "pages/work/member-manage/approve/approve",
+			"style": {
+				"navigationBarTitleText": "审批",
+				"app-plus": {
+
+				}
+			}
+		},
+		{
+			"path": "pages/work/member-manage/approve/myApprove",
+			"style": {
+				"navigationBarTitleText": "我的审批"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/approve/myApproveDetail",
+			"style": {
+				"navigationBarTitleText": "审批详情"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/approve/myRequest",
+			"style": {
+				"navigationBarTitleText": "我的申请"
+			}
+		},
+		{
+			"path": "pages/work/member-manage/approve/myRequestDetail",
+			"style": {
+				"navigationBarTitleText": "申请详情"
+			}
+		},
+		{
+			"path": "pages/phones/phones",
+			"style": {
+				"navigationBarTitleText": "通讯录",
+				"app-plus": {
+					"bounce": "none",
+					"scrollIndicator": "none",
+					"animationType": "fade-in",
+					"animationDuration": 300
+				}
+			}
+		}, {
+			"path": "pages/phones/phone-details",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+
+			}
+		},
+		{
+			"path": "pages/phones/phone-search",
+			"style": {
+				"navigationBarTitleText": "搜索人员",
+				"app-plus": {
+
+				}
+			}
+		}
+        ,{
+            "path" : "pages/work/member-manage/training-school/training-school",
+            "style" : {
+				"navigationBarTitleText":"培训学院",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"text": "\ue654",
+							"color": "#fff",
+							"fontSrc": "/static/fonts/iconfont.ttf"
+						}]
+					}
+				}
+			}
+        },
+		{
+		    "path" : "pages/work/member-manage/training-school/note/note",
+		    "style" : {
+				"navigationBarTitleText":"我的笔记"
+			}
+		},
+		{
+		    "path" : "pages/work/member-manage/training-school/add-train/add-train",
+		    "style" : {
+				"navigationBarTitleText":"新增培训"
+			}
+		},
+		{
+		    "path" : "pages/work/member-manage/task/addTask/addTask",
+		    "style" : {
+				"navigationBarTitleText":"添加任务"
+			}
+		},{
+            "path" : "pages/work/member-manage/task/taskDetail/taskDetail",
+            "style" : {
+				"navigationBarTitleText":"任务详情",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"type": "menu",
+							"color": "#fff"
+						}]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/work/member-manage/task/taskDynamic/taskDynamic",
+            "style" : {
+				"navigationBarTitleText":"任务动态",
+				"enablePullDownRefresh":true
+			}
+        }
+        ,{
+            "path" : "pages/work/member-manage/task/taskStep/taskStep",
+            "style" : {
+				"navigationBarTitleText":"任务进度"
+			}
+        }
+        ,{
+            "path" : "pages/work/member-manage/task/editTask/editTask",
+            "style" : {
+				"navigationBarTitleText":"编辑任务"
+			}
+        }
+        ,{
+            "path" : "pages/work/file/file",
+            "style" : {
+				"navigationBarTitleText":"智库管理",
+				"app-plus":{
+					"animationType": "zoom-fade-out",
+					"animationDuration": 400
+				}
+			}
+        }
+        ,{
+            "path" : "pages/work/member-manage/approve/approveDetail/approveDetail",
+            "style" : {
+				"navigationBarTitleText":"发起审批"
+			}
+        }
+        ,{
+            "path" : "pages/work/file/myFile/myFile",
+            "style" : {
+            	"navigationBarTitleText":"我的文件"
+            }
+        }
+        ,{
+            "path" : "pages/my/user-info/user-info",
+            "style" : {
+				"navigationBarTitleText":"个人资料"
+			}
+        }
+        ,{
+            "path" : "pages/my/facial/facial",
+            "style" : {
+				"navigationBarTitleText":"人脸设置"
+			}
+        }
+        ,{
+            "path" : "pages/my/feedback/feedback",
+            "style" : {
+				"navigationBarTitleText":"用户反馈"
+			}
+        }
+        ,{
+            "path" : "pages/my/about/about",
+            "style" : {
+				"navigationBarTitleText":"关于智能制造"
+			}
+        }
+        ,{
+            "path" : "pages/my/share-card/share-card",
+            "style" : {
+				"navigationBarTitleText":"分享电子名片"
+			}
+        }
+        ,{
+            "path" : "pages/work/file/move-file/move-file",
+            "style" : {
+				"navigationBarTitleText":"文件移动"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/funnel/funnel",
+            "style" : {
+				"navigationBarTitleText":"销售漏斗"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/customer/customer",
+            "style" : {
+				"navigationBarTitleText":"我的客户",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"type": "menu",
+							"color": "#fff"
+						}]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/customer/customerDetail/customerDetail",
+            "style" : {
+				"navigationBarTitleText":"客户详情",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"type": "menu",
+							"color": "#fff"
+						}]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/customer/newCustomer/newCustomer",
+            "style" : {
+				"navigationBarTitleText":"新建客户"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/customer/editCustomer/editCustomer",
+            "style" : {
+				"navigationBarTitleText":"编辑客户"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/contact/contact",
+            "style" : {
+				"navigationBarTitleText":"联系人"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/contact/newContact/newContact",
+            "style" : {
+				"navigationBarTitleText":"新建联系人"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/contact/contactDetail/contactDetail",
+            "style" : {
+				"navigationBarTitleText":"联系人详情"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/chance/chance",
+            "style" : {
+				"navigationBarTitleText":"我的机会"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/contract/contract",
+            "style" : {
+				"navigationBarTitleText":"我的合同"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/contact/editContact/editContact",
+            "style" : {
+				"navigationBarTitleText":"编辑联系人"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/chance/newChance/newChance",
+            "style" : {
+				"navigationBarTitleText":"新建机会"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/chance/chanceDetail/chanceDetail",
+            "style" : {
+				"navigationBarTitleText":"机会详情"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/chance/editChance/editChance",
+            "style" : {
+				"navigationBarTitleText":"编辑机会"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/contract/newContract/newContract",
+            "style" : {
+				"navigationBarTitleText":"新建合同"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/contract/contractDetail/contractDetail",
+            "style" : {
+				"navigationBarTitleText":"合同详情"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/contract/editContract/editContract",
+            "style" : {
+				"navigationBarTitleText":"编辑合同"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/activity/activity",
+            "style" : {
+				"navigationBarTitleText":"活动"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/activity/newActivity/newActivity",
+            "style" : {
+				"navigationBarTitleText":"新建活动"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/activity/activityDetail/activityDetail",
+            "style" : {
+				"navigationBarTitleText":"活动详情"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/activity/editActivity/editActivity",
+            "style" : {
+				"navigationBarTitleText":"编辑活动"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/competitor/competitor",
+            "style" : {
+				"navigationBarTitleText":"竞争对手"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/competitor/newCompetitor/newCompetitor",
+            "style" : {
+				"navigationBarTitleText":"新建竞争对手"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/competitor/competitorDetail/competitorDetail",
+            "style" : {
+				"navigationBarTitleText":"竞争对手详情"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/competitor/editCompetitor/editCompetitor",
+            "style" : {
+				"navigationBarTitleText":"编辑竞争对手"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/order/order",
+            "style" : {
+				"navigationBarTitleText":"订单管理"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/product/product",
+            "style" : {
+				"navigationBarTitleText":"产品",
+				"enablePullDownRefresh":true
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/product/newProduct/newProduct",
+            "style" : {
+				"navigationBarTitleText":"新建产品"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/product/productDetail/productDetail",
+            "style" : {
+				"navigationBarTitleText":"产品详情"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/product/editProduct/editProduct",
+            "style" : {
+				"navigationBarTitleText":"修改产品"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/order/newOrder/newOrder",
+            "style" : {
+				"navigationBarTitleText":"新建订单"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/order/orderDetail/orderDetail",
+            "style" : {
+				"navigationBarTitleText":"订单详情",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"float": "right",
+							"type": "menu",
+							"color": "#fff"
+						}]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/order/editOrder/editOrder",
+            "style" : {
+				"navigationBarTitleText":"修改订单"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/editPrincipal/editPrincipal",
+            "style" : {
+				"navigationBarTitleText":"修改负责人"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/marketDynamic/marketDynamic",
+            "style" : {
+				"navigationBarTitleText":"市场动态"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/distributor/distributor",
+            "style" : {
+				"navigationBarTitleText":"分销商管理"
+			}
+        }
+        ,{
+            "path" : "pages/work/market-manage/dataCenter/dataCenter",
+            "style" : {
+				"navigationBarTitleText":"用户数据中心"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "light",
+		"navigationBarTitleText": "沃土 - 智能制造",
+		"navigationBarBackgroundColor": "#2fa3da",
+		"backgroundColorTop": "#ebebeb"
+	},
+	"tabBar": {
+		"backgroundColor": "#fff",
+		"color": "#8F8F94",
+		"selectedColor": "#36a8fe",
+		"list": [{
+				"pagePath": "pages/work/work",
+				"iconPath": "static/img/tabbar/work.png",
+				"selectedIconPath": "static/img/tabbar/work-blue.png",
+				"text": "工作"
+			},
+			{
+				"pagePath": "pages/phones/phones",
+				"iconPath": "static/img/tabbar/contact.png",
+				"selectedIconPath": "static/img/tabbar/contact-blue.png",
+				"text": "联系人"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/img/tabbar/my.png",
+				"selectedIconPath": "static/img/tabbar/my-blue.png",
+				"text": "我的"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	},
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+	"scope.userLocation": {
+	  "desc": "你的位置信息将用于打卡地址定位"
+	}
+  }
+}

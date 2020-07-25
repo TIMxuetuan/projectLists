@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+  <mp-form-page title="党员缴费系统">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells>
+            <mp-cell prop="mobile" title="手机号" >
+                <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="请输入手机号" />
+            </mp-cell>
+            <mp-cell prop="password" title="密码" >
+                <input bindinput="formInputChange" data-field="password" class="weui-input" placeholder="请输入密码"/>
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="check" slot="tips">
+        <checkbox-group prop="agree" data-field="agree" bindchange="bindAgreeChange">
+            <checkbox id="cb" value="agree" checked="{{isAgree}}"/>
+            <label class="checkbox" for="cb">阅读并同意</label>
+            <navigator class="rule" url="#">《相关条款》</navigator>
+        </checkbox-group>
+        
+    </view>
+    <view slot="button" class="btn-wrap">
+        <button class="weui-btn"  type="primary" bindtap="submitForm">登录</button>
+        <button class="weui-btn"  type="default" >注册</button>
+    </view>
+</mp-form-page>
+
+</view>

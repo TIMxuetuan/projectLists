@@ -1,0 +1,22 @@
+{
+  "name": "wotu",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://wangweizhen@git.keji01.com/changzheng1/wotu_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dcloudio/uni-ui": "^1.0.1",
+    "gmy-float-touch": "^1.0.0",
+    "uni-request": "^1.0.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}

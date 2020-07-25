@@ -1,0 +1,27 @@
+<!--pages/beddingDetail/beddingDetail.wxml-->
+<view class="container">
+    <view class='bl-panel'>
+    <view class='panel-title'>被装信息</view>
+    <view class="bl-pel11" wx:if="{{isbedding}}">
+      <!-- <text>帽子:{{bedding.hat}}</text>
+      <text>衣服:{{bedding.clothes}}</text>
+      <text>鞋子:{{bedding.shoes}}</text> -->
+      <view class="contant">
+          <view>帽子</view>
+          <view>{{bedding.hat}}</view>
+      </view>
+      <view class="contant">
+          <view>衣服</view>
+          <view>{{bedding.clothes}}</view>
+      </view>
+      <view class="contant">
+          <view>鞋子</view>
+          <view>{{bedding.shoes}}</view>
+      </view>
+      
+    </view>
+    <view class='no-data' wx:if="{{!isbedding}}">您还没有添加信息</view>
+    <button class="bl-button bt" bindtap='bedding' wx:if="{{!isbedding}}">去添加</button>
+    <button class="bl-button bt" bindtap='bedding' wx:if="{{isbedding}}">编辑</button>
+  </view>
+</view>

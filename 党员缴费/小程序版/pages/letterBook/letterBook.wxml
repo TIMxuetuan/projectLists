@@ -1,0 +1,13 @@
+<!--pages/letterBook/letterBook.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class="textcontent">
+  <view class="textTitle">党员缴费承诺书</view>
+
+  <view class="textContainer">
+    <view class="wxParse">
+     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cu-custom": "/common/color-ui/components/cu-custom",
+    "van-loading": "/vant/loading/index"
+  }
+}

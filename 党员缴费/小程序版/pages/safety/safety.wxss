@@ -1,0 +1,46 @@
+.oneViewStyle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.header-bg{
+  position: absolute;
+  /* z-index: -1; */
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  background-size: cover;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+
+  width: 100vw;
+  overflow: hidden;
+}
+
+.cu-custom{
+  background-color: #E7222C;
+}
+
+.cuIcon-back{
+  color: #ffffff;
+}
+
+/*我的内容*/
+.myContent{
+  width: 100%;
+}
+
+.myContent-li{
+  /* border-bottom: 1px solid #F0F0F0; */
+}
+.myContent-li .van-cell{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}

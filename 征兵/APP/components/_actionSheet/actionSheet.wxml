@@ -1,0 +1,13 @@
+<view class='actionSheet' hidden='{{!isShow}}' catchtouchmove="move">
+  <view class='as-head'>
+    <text class='as-title'>{{title}}</text>
+    <text class='iconfont icon-close as-close' bindtap='close'></text>
+  </view>
+  <view class='as-content' style='height:{{contentHeight}}'>
+    <slot></slot>
+  </view>
+  <view class='as-foot' hidden='{{!showFoot}}' style='height:{{footHeight}}'>
+    <slot name='foot'></slot>
+  </view>
+</view>
+<view class='as-mask' bindtap='close' catchtouchmove="move" hidden='{{!isShow}}'></view>

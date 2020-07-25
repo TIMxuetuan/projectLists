@@ -1,0 +1,13 @@
+<!--pages/schoolDetail/schoolDetail.wxml-->
+<view class='container'>
+  <view class='bl-panel' >
+    <view class='panel-title'>学校名称</view>
+    <view class="bl-pel" wx:if="{{schoolPages}}">
+        <text>{{school_location}}-</text>
+        <text>{{school}}</text>
+    </view>
+  </view>
+  <view class='no-data' wx:if="{{!schoolPages}}">没数据请添加</view>
+  <button class="bl-button bt" bindtap='goSchol' wx:if="{{!schoolPages}}">去添加</button>
+  <button class="bl-button bt" bindtap='goSchol' wx:if="{{schoolPages}}">编辑</button>
+</view>

@@ -1,0 +1,18 @@
+<include src='../../components/page-loading.wxml' />
+<view class='container'>
+
+  <view class='bl-panel'>
+    <view class='panel-title'>特长爱好</view>
+    <view class="bl-pel bl-pel1" wx:if="{{isNoll}}">
+
+      <text class="bl-text" wx:for="{{speciality}}" wx:for-item="item" wx:key="{{item}}">
+            <text class="iconfont icon-biaoji"></text>
+            <text>{{item}}</text>
+    </text>
+  </view>
+  <view class='no-data' wx:if="{{!isNoll}}">没数据请添加</view>
+  <button class="bl-button bt" bindtap='specialtyA' wx:if="{{!isNoll}}">去添加</button>
+  <button class="bl-button bt" bindtap='specialty' wx:if="{{isNoll}}">编辑</button>
+</view>
+
+</view>

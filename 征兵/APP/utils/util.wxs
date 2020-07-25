@@ -1,0 +1,87 @@
+var formatDate = function (time, separator) {
+  var _separator = separator || '-';
+
+  var now = time ? getDate(time) : getDate();
+
+  var o = {
+    "Y+": now.getFullYear(),     //Year
+    "M+": now.getMonth() + 1,     //month
+    "D+": now.getDate(),        //day
+    "h+": now.getHours(),       //hour
+    "m+": now.getMinutes(),     //minute
+    "s+": now.getSeconds(),     //second
+    "q+": Math.floor((now.getMonth() + 3) / 3), //quarter
+    "S": now.getMilliseconds() //millisecond
+  };
+
+  var _time = [
+    o['Y+'],
+    o['M+'] < 10 ? '0' + o['M+'] : o['M+'],
+    o['D+'] < 10 ? '0' + o['D+'] : o['D+']
+  ]
+
+  return _time.join(_separator)
+}
+
+var _indexOf = function(arr,val){
+  var _arr = arr.split(',');
+  return _arr.indexOf(val)
+}
+
+var activityUrl = function (Id,curDate, applyenddate, enddate, awardsdate){
+  var url = '/pages/activityDetails/activityDetails?id=' + Id;
+  if (curDate > applyenddate){
+    url = '/pages/works/works?id='+Id;
+  }
+  return url;
+}
+
+var abc = function(index){
+  return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')[index];
+}
+
+var _parseInt = function(value){
+  return parseInt(value)
+}
+
+var isImg = function (imgName) {
+  return imgName.indexOf('png') > -1?true:false;
+}
+
+var address_array = function (address){
+  if (!address){
+    return [];
+  }
+  return address.split('@');
+}
+
+var _formatOfflineActivitieStatus = function (status) {
+  var _map = {
+    "1": "审核中",
+    "2": "已通过",
+    "3": "未通过",
+    "4": "已禁止"
+    }
+  return _map[status];
+}
+
+var _lengthString = function (string, separator){
+  var _string = string||'';
+  var _separator = separator||'';
+  if (!_string){
+      return 0;
+  }
+  return _string.split(separator).length
+}
+
+module.exports = {
+  _date: formatDate,
+  _indexOf: _indexOf,
+  activityUrl: activityUrl,
+  abc: abc,
+  _parseInt: _parseInt,
+  _address_array: address_array,
+  isImg: isImg,
+  _formatOfflineActivitieStatus: _formatOfflineActivitieStatus,
+  _lengthString: _lengthString
+}

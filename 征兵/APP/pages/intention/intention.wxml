@@ -1,0 +1,17 @@
+<view class='container'> 
+  <view class='bl-panel' >
+    <view class='panel-title'>参军意向</view>
+    <view class="bl-pel" wx:if="{{!emailInfo}}">
+        <view class="bl-one" wx:if="{{toInfo}}">
+            <view>第一志愿：{{model.volunteer1}}</view>
+            <view>第二志愿：{{model.volunteer2}}</view>
+        </view>
+        <view class="bl-two" wx:if="{{!toInfo}}">
+            <view>接受祖国挑选</view>
+        </view>
+    </view>
+  </view>
+  <view class='no-data' wx:if="{{emailInfo}}">暂无数据请添加</view>
+  <button class="bl-button bt" bindtap='goIntention' wx:if="{{emailInfo}}">去添加</button>
+  <button class="bl-button bt" bindtap='goIntention' wx:if="{{!emailInfo}}">编辑</button>
+</view>

@@ -1,0 +1,9 @@
+<view class="sd-touch-item {{isTouchMove ? 'sd-touch-move-active' : ''}}" 
+  bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend='touchend'>
+  <view class="sd-content">
+    <slot name="content"></slot>
+  </view>
+  <view class="sd-tools">
+    <slot name="tools"></slot>
+  </view>
+</view>

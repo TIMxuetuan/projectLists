@@ -1,0 +1,13 @@
+<view class='container'>
+  <view class='bl-panel'>
+    <view class='panel-title'>邮寄地址</view>
+    <view class="bl-pel" wx:if="{{isInfo}}">
+        <view>邮寄地址：{{send_address}}</view>
+        <view>联系人：{{send_name}}</view>
+        <view>联系人电话：{{send_phone}}</view>
+    </view>
+  </view>
+  <view class='no-data' wx:if="{{!isInfo}}">没数据请添加</view>
+  <button class="bl-button bt" bindtap='goEmail' wx:if="{{!isInfo}}">去添加</button>
+  <button class="bl-button bt" bindtap='goEmail' wx:if="{{isInfo}}">编辑</button>
+</view>

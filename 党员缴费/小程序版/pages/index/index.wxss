@@ -1,0 +1,221 @@
+/**index.wxss**/
+page {
+  width: 100%;
+}
+.oneViewStyle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.header-bg{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100vw;
+  overflow: hidden;
+  min-height: 100vh;
+  background-size: cover;
+  box-sizing: border-box;
+ 
+}
+
+
+.cu-custom .cu-bar{
+  background-color: #E7222C;
+}
+
+.background-imgs {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 88rpx;
+  height: 88rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.zhanwei-one{
+  width: 350rpx;
+  height: 90rpx;
+  margin-left: 60rpx;
+}
+
+.topimage image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 440rpx;
+}
+
+.zhanwei-two{
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+.zhanwei-two image{
+  width: 180rpx;
+  height: 180rpx;
+}
+
+/*轮博样式*/
+swiper {
+  width: 100%;
+  height: 400rpx;
+  margin: 0 auto;
+}
+
+image {
+  width: 100%;
+  height: 400rpx;
+}
+
+/*自定义指示点样式*/
+.swp-dot {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin-top: 18rpx;
+}
+
+.m-r-8 {
+  margin-right: 16rpx;
+}
+
+.square-12 {
+  width: 40rpx;
+  height: 10rpx;
+  background-color: #000000;
+  border-radius: 6rpx;
+  transition: width 0.2s linear;
+}
+
+.active {
+  background-color: #EE0A24;
+  width: 60rpx;
+  transition: width 0.2s linear;
+}
+/*登录注册表单*/
+.containner-from {
+  display: flex;
+  justify-content: center;
+  margin: 40rpx 0 60rpx;
+}
+
+.containner-from .margin-right {
+  margin: 0 80rpx 0 0;
+}
+
+.containner-from button {
+  width: 200rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #E7222C;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.page-section {
+  width: 700rpx;
+}
+
+/*表格*/
+.fromContent{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.fromContent-title{
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  background-color: #fff;
+  padding: 20rpx 20rpx;
+  margin-top: 20rpx;
+  font-weight: bold;
+}
+
+.title-left{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title-right{
+  font-size: 14px;
+  color: #999;
+  display: flex;
+  font-weight: 900;
+  align-items: center;
+}
+
+/* .tableContent-nei{
+  margin-top: 20rpx;
+} */
+
+.tableContent-table{
+  background-color: #ffffff;
+}
+
+.tableContent{
+  margin: 50rpx auto 0;
+  width: 690rpx;
+}
+
+.tableContent-title{
+  width: 100%;
+  height: 80rpx;
+  /* background-color: #E7222C; */
+  background-color: #ffffff;
+  color: #000000;
+  border-bottom: 1px solid #F0F0F0;
+  display: flex;
+  align-items: center;
+}
+.tableContent-title text{
+  width: 230rpx;
+  text-align: center;
+}
+
+.tableContent-li{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid #F0F0F0;
+}
+.tableContent-li text{
+  width: 230rpx;
+  text-align: center;
+}
+
+
+.zanwu{
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  height: 200rpx;
+  line-height: 200rpx;
+}

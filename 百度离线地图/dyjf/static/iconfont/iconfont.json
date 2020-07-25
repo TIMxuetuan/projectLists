@@ -1,0 +1,30 @@
+{
+  "id": "1815860",
+  "name": "jiaofei",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14112214",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "10017356",
+      "name": "缴费记录",
+      "font_class": "icon_jiaofeijilu-copy",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "11755443",
+      "name": "线上缴费",
+      "font_class": "peizhitubiaosvg-",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    }
+  ]
+}

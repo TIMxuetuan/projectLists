@@ -1,0 +1,58 @@
+<!--pages/quota/quota.wxml-->
+<view class="container">
+  <cu-custom class="header-box" isBack="{{true}}">
+    <view slot="backText" style="color:#ffffff">返回</view>
+    <view slot="content" class="header-text" style="color:#ffffff">缴费记录</view>
+  </cu-custom>
+
+  <view class="topTime timeIcon">
+     <van-field
+        readonly
+        model:value="{{currentDate}}"
+        type="text"
+        label="查询日期"
+        placeholder="请选择日期"
+        border="{{false}}"
+        title-width='120px'
+        bindtap="showPopup"
+        >
+      </van-field>
+      <view wx:if='{{isIconClick}}' class="leftIcon" bindtap="iconClick"><van-icon name="close" size="20px" /></view>
+  </view>
+
+  <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+    <van-datetime-picker
+      type="year-month"
+     value="{{ showDate }}"
+     max-date="{{maxDate}}"
+      formatter="{{ formatter }}"
+      bind:confirm="confirmFn"
+        bind:cancel="cancelFn"
+    />
+</van-popup>
+
+<!--表格内容-->
+  <view class="tableContent">
+    <view class="tableContent-title">
+      <text>时间</text>
+      <text>金额（元）</text>
+      <text style="text-align:right">状态</text>
+    </view>
+    <view class="tableContent-table" wx:if='{{array != ""}}'>
+      <view class="tableContent-li" wx:for="{{array}}" wx:for-index="index" wx:for-item="itemName">
+       <text>{{itemName.payyear}}-{{itemName.paymonth}}</text>
+          <text>{{itemName.paidin}}</text>
+        <text wx:if="{{itemName.paidin != 0 || itemName.paidin != ''}}" style="color:#1AAD19;text-align:right">已缴</text>
+        <text wx:else style="color:#E7222C;text-align:right" data-can="{{itemName}}" bindtap="makepayment">未缴(请补缴)</text>
+      </view> 
+    </view>
+
+    <view class="zanwu" wx:else>
+        暂无数据
+      </view>
+
+  </view>
+</view>
+
+<!-- 在页面内添加对应的节点 -->
+<van-toast id="van-toast" />

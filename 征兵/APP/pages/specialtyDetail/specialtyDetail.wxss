@@ -1,0 +1,39 @@
+/* pages/specialtyDetail/specialtyDetail.wxss */
+.bl-panel{border: #eee solid 1px; padding: 0;  margin-bottom: 30rpx;}
+.panel-title{ 
+  margin-bottom: 0; padding:0 20rpx; background: #f8f8f8; border-bottom: #eee solid 1px;
+  font-size:32rpx; text-align: left; line-height: 70rpx;
+  display: flex;
+  align-items:center;
+  font-weight: bold;
+ }
+ .panel-title .end{ flex: 1; text-align: right; font-size: 26rpx;}
+.bl-pel{padding:60rpx 15rpx 60rpx 15rpx ;border-bottom: #ddd solid 1px;}
+.bl-pel11{
+  font-size:30rpx;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:60rpx 20rpx;
+  
+}
+.bl-text{
+  margin-left:30rpx;
+   text-align: left;
+   display:inline-block;
+   width:29%;
+   }
+.bl-pel1{
+  word-break:break-all;
+}
+.icon-biaoji{
+  font-size:41rpx;
+  color:#09bb4f;
+}
+.bt{width:100%;}
+.container{
+  padding:20rpx;
+}
+.iconfont{
+  font-size:36rpx;
+}

@@ -1,0 +1,26 @@
+{
+  "usingComponents": {
+    "cu-custom": "/common/color-ui/components/cu-custom",
+    "van-nav-bar": "/vant/nav-bar/index"
+  },
+  "navigationStyle": "custom",
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "/images/home-active.png",
+        "iconPath": "/images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/mine-active.png",
+        "iconPath": "images/mine.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ],
+    "color": "#666666",
+    "backgroundColor": "#fff",
+    "selectedColor": "#F22424"
+  }
+}

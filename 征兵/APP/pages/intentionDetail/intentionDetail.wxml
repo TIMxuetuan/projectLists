@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="border-list">
+
+    <view class="item">
+      <view class='label'>第一志愿:</view>
+      <view class='input-box'>
+        <picker bindchange="bindPickerHat" mode="selector" disabled="{{disabled}}" value="{{one_index}}" range="{{volunArry}}" range-key="label">
+          <view class="picker">
+            <input placeholder="请选择第一志愿*" disabled value="{{one_name}}" />
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="item">
+    <view class='label'>第二志愿:</view>
+      <view class='input-box'>
+        <picker bindchange="bindPickerClothes" mode="selector" disabled="{{disabled}}" value="{{two_index}}" range="{{volunBrry}}" range-key="label">
+          <view class="picker">
+            <input placeholder="请选择第二志愿*" disabled value="{{two_name}}" />
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="item body-view">
+      <view class="body-view-text">接受祖国挑选</view>
+      <switch bindchange="switchChange" checked="{{checked}}"/>
+  </view>
+  </view>
+
+  
+    
+
+  <view class="register-btn">
+    <button class="bt bt1" bindtap="goIntentior">保存</button>
+  </view>
+
+  <view class="consult">
+      <view class="consult-title">温馨提示!!!</view> 
+      <view class="consult-contant">
+          <view class="yifu"> 
+            <view> *志愿选项目前只是展示效果，不能当做真实的志愿选择，当可以选择真实的志愿时，会通知大家</view>
+          </view>
+      </view>
+
+     
+  </view>
+</view>

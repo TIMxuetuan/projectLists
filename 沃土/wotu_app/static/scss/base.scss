@@ -1,0 +1,103 @@
+@import './_variables.scss'; //导入sass变量
+
+// 仿微信样式 
+$color_text:#868887;
+$color_icon:#47A3D9;
+.w-panel{
+	width: 100%;
+	border-radius: 10upx;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fff;
+	margin-bottom: 10upx;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.w-panel-title{
+	box-sizing: border-box;
+	padding-left: 20upx;
+	width: 100%;
+	height: 100upx;
+	display: flex;
+	align-items: center;
+	font-size: 36upx;
+	color: $color_text;
+	border-bottom: 1upx solid #EBEBEB;
+}
+.w-panel-cell{
+	box-sizing: border-box;
+	border-right: 1upx solid #EBEBEB;
+	border-bottom: 1upx solid #EBEBEB;
+	width: calc(100% / 3);
+	padding: 80upx 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.iconfont{
+		color: $color_icon;
+		font-size: 60upx;
+	}
+	.title{
+		color: $color_text;
+		font-size: 26upx;
+		margin-top: 10upx;
+	}
+	// &:nth-of-type(3n){
+	// 	border-right: none;
+	// }
+}
+
+.w-panel-header{
+	@extend .w-panel;
+	height: 200upx;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.w-panel-header-cell{
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.iconfont{
+		color: #fff;
+		font-size: 50upx;
+	}
+	.title{
+		color: #fff;
+		font-size: 30upx;
+		margin-top: 10upx;
+	}
+}
+
+//card 一个标题，一个卡片，标题在卡片之外
+.w-wrap{
+	margin-bottom: 20upx;
+}
+
+.w-title{
+	font-size: $uni-font-size-lg;
+	color: $uni-text-color;
+	height: 80upx;
+	display: flex;
+	align-items: center;
+	&:before{
+		content: '';
+		width: 8upx;
+		height: $uni-font-size-lg;
+		background: #1F75E5;
+		margin-right: 20upx;
+	}
+}
+
+.w-card{
+	width: 100%;
+	border-radius: 10upx;
+	background-color: #fff;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size: $uni-font-size-base;
+}

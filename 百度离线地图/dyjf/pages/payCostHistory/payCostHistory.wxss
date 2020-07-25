@@ -1,0 +1,27 @@
+/* pages/payCostHistory/payCostHistory.wxss */
+.container{
+  padding: 20rpx;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+
+.list{
+
+}
+.list .item{
+  background-color: #fff;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.list .item .money{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #FF6666;
+}
+.list .item .date{
+  font-size: 24rpx;
+  color: #999;
+}

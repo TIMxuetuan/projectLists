@@ -1,0 +1,31 @@
+/* pages/experience/experience.wxss */
+
+.container {
+  padding: 20rpx;
+}
+.border-list {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20rpx;
+}
+.border-list .item {
+  display: flex;
+  align-items: center;
+  padding: 0 16rpx;
+  border-bottom: #ddd solid 1px;
+}
+.label {
+  width: 210rpx;
+  font-size: 28rpx;
+}
+.border-list .input-box{
+  flex:1;
+}
+.border-list .input-box input{
+  text-align:right;
+  font-size:13px;
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+}
+.bt{width:100%; height:100rpx;line-height:100rpx;}

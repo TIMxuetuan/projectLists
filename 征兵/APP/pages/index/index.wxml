@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<!-- <web-view src="http://127.0.0.1:2001/demo/test-webview.php"></web-view> -->
+<view class="container">
+  <view class="content">
+    <view class="certificates">
+      <view class="logo" bindtap='upFileLinkTo'>
+        <view class="shoot-p">
+        <!--bindinput='bindKeyInput'-->
+          <view class="logo-border" >
+            <image  class="image1" src='{{logoPath||model.head}}' mode='scaleToFill'></image>
+            <image class="image2" src='../../images/default-head-1.jpg'></image>
+            <view>选择证件照</view>
+          </view>
+          <view class="introduce">
+            <text>(1)本人近期一寸彩色免冠正面证件照;不允许带帽子、头巾、发带、墨镜；</text>
+            <text>(2)照片格式大小：格式为jpg/png，不大于500K；</text>
+            <text>(3)照片为红色的纯色背景；</text>
+            <text>(4)此照片将用于“预征对象登记表”、“应征公民政治考核表”，请按要求上传。</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="jump">
+
+      <navigator url='/pages/schoolDetail/schoolDetail' hover-class="navigator-hover" class='item item-has-arrow-right'>
+        <text><text class="iconfont  icon-banshichu2"></text>学校所在地</text>
+      </navigator>
+
+      <navigator url='/pages/experienceDeatil/experienceDeatil' hover-class="navigator-hover" class='item  item-has-arrow-right'>
+        <text><text class="iconfont icon-jiaoyujingli"></text>主要经历</text>
+      </navigator>
+
+      <navigator url='/pages/rewardsDetail/rewardsDetail' hover-class="navigator-hover" class='item item-has-arrow-right'>
+        <text><text class="iconfont icon-jiangcheng"></text> 奖惩情况</text>
+      </navigator>
+
+      <navigator url='/pages/familyDetail/familyDetail' hover-class="navigator-hover" class='item item-has-arrow-right'>
+        <text><text class="iconfont icon-fangzi"></text> 家庭成员情况</text>
+      </navigator>
+
+      <navigator url='/pages/sociologyDetail/sociologyDetail' hover-class="navigator-hover" class='item item-has-arrow-right'>
+        <text><text class="iconfont icon-shehuiguanxi"></text> 主要社会关系情况</text>
+      </navigator>
+
+      <navigator url='/pages/specialtyDetail/specialtyDetail' hover-class="navigator-hover" bindtap='exit' class='item item-has-arrow-right'>
+        <text><text class="iconfont icon-jinengtechang"></text> 特长爱好</text>
+      </navigator>
+
+        <navigator url='/pages/beddingDetail/beddingDetail' hover-class="navigator-hover" bindtap='exit' class='item item-has-arrow-right'>
+        <text><text class="iconfont icon-beizhuang"></text>被装信息</text>
+      </navigator>
+
+        <navigator url='/pages/email/email' hover-class="navigator-hover" class='item item-has-arrow-right'>
+        <text><text class="iconfont iconfont1  icon-youjidizhi"></text>邮寄地址</text>
+      </navigator>
+
+      <navigator url='/pages/intention/intention' hover-class="navigator-hover" class='item item-has-arrow-right'>
+        <text><text class="iconfont iconfont1 icon-yixiangdan"></text>参军意向</text>
+      </navigator>
+
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/payCost/payCost.wxml-->
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<mp-form id="form" rules="{{rules}}" models="{{formData}}" ext-class="my-form">
+	<mp-cells >
+    <mp-cell prop="date" title="缴费月份" ext-class="">
+			<picker data-field="date" mode="date" value="{{date}}" fields="month" start="2017-09-01" end="2050-09-01" bindchange="bindDateChange">
+				<view class="weui-input">{{date}}</view>
+			</picker>
+		</mp-cell>
+		<mp-cell prop="salary" title="月薪" ext-class="">
+			<input bindinput="formInputChange" type="number" data-field="salary" class="weui-input" placeholder="请输入近期月薪" />
+		</mp-cell>
+		
+		<mp-cell prop="money" title="缴费金额" ext-class="">
+			<input bindinput="formInputChange" type="number" data-field="money" class="weui-input" placeholder="请输入缴费金额" />
+		</mp-cell>
+	</mp-cells>
+  <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+  </view>
+</mp-form>

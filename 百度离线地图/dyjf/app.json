@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/my/my",
+    "pages/payCost/payCost",
+    "pages/payCostHistory/payCostHistory"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "mp-toptips": "/miniprogram_npm/weui-miniprogram//toptips/toptips",
+    "mp-cells": "/miniprogram_npm/weui-miniprogram//cells/cells",
+    "mp-cell": "/miniprogram_npm/weui-miniprogram//cell/cell",
+    "mp-checkbox": "/miniprogram_npm/weui-miniprogram//checkbox/checkbox",
+    "mp-checkbox-group": "/miniprogram_npm/weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-form": "/miniprogram_npm/weui-miniprogram/form/form",
+    "mp-form-page": "/miniprogram_npm/weui-miniprogram/form-page/form-page",
+    "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#07c160",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/images/home.png",
+        "selectedIconPath": "/static/images/home_select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/static/images/my.png",
+        "selectedIconPath": "/static/images/my_select.png"
+      }
+    ]
+  }
+}

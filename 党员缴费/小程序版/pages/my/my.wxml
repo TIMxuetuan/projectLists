@@ -1,0 +1,190 @@
+<!-- <view class="container" style="background-image:url({{urlImg}});"> -->
+<view class="container">
+  <cu-custom class="header-box" isBack="{{false}}">
+    <view slot="backText" style="color:#ffffff"></view>
+    <view slot="content" class="header-text" style="color:#ffffff">我的</view>
+  </cu-custom>
+
+  <view class="myHeadPhoto">
+    <!-- <view><image src="http://pic1.win4000.com/wallpaper/1/591a5b25da2cd.jpg"></image></view> -->
+    <!-- <view wx:if="{{false}}" class="myHeadPhoto-text">
+      <view class="myHeadPhoto-name">昵称</view>
+      <view class="myHeadPhoto-dang">党委党支部</view>
+    </view> -->
+
+    <view class="userAvatarUrlSize"><open-data type="userAvatarUrl"></open-data></view>
+    <view wx:if="{{true}}" class="myHeadPhoto-text">
+      <view class="myHeadPhoto-name">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class="myHeadPhoto-dang">{{customArray}}</view>
+    </view>
+
+    <view wx:else>
+      <button class="cu-btn bg-green lg" open-type="getPhoneNumber" lang="zh_CN" bindgetphonenumber="getPhoneNumber">
+        <text class="cuIcon-weixin lg"></text> 微信用户授权登录</button>
+        <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+    </view>
+  </view>
+
+  <!--我的内容-->
+  <view class="myContent">
+    <view class="huiTiao"></view>
+    <view class="myContent-li linefeed">   
+      <text slot="button" class="myIcon iconfont iconxingming1"></text>   
+      <van-field
+        readonly
+        class="leftInput"
+        input-align="right"
+        model:value="{{username}}"
+        type="text"
+        label="姓名"
+        placeholder="请填写姓名"
+        border="{{false}}"
+        title-width='120px'
+        icon="arrow"
+        bindtap="amendName"
+        >
+      </van-field>
+    </view>
+
+    <view class="myContent-li linefeed sexStyle">
+      <text slot="button" class="myIcon iconfont iconxingbie---"></text>   
+      <picker class="leftInput" bindchange="bindPickerChange" value="{{objectIndex}}" range-key="name" range="{{array}}">
+          <van-field
+            readonly
+            model:value="{{array[objectIndex].name}}"
+            type="text"
+            label="性别"
+            border="{{ false }}"
+            title-width='120px'
+            icon="arrow"
+            >
+          </van-field>
+      </picker>
+      <!-- <van-field
+        input-align="right"
+        model:value="{{usersex}}"
+        type="text"
+        label="性别"
+        placeholder="请选择性别"
+        border="{{false}}"
+        title-width='120px'
+        icon="arrow"
+        >
+      </van-field> -->
+    </view>
+
+    <view class="myContent-li linefeed">
+    <text slot="button" class="myIcon iconfont iconshenfenzhenghao"></text>   
+      <van-field
+        readonly
+        class="leftInput"
+        input-align="right"
+        model:value="{{usercard}}"
+        type="idcard"
+        label="身份证号"
+        placeholder="请输入身份证号"
+        border="{{false}}"
+        title-width='120px'
+        icon="arrow"
+        bindtap="usercardChange"
+        >
+      </van-field>
+    </view>
+
+    <view class="linefeed">
+      <text slot="button" class="myIcon iconfont iconshoujihao"></text>   
+      <van-field
+      class="leftInput"
+        readonly
+        input-align="right"
+        model:value="{{userphone}}"
+        type="text"
+        label="手机号"
+        placeholder="请输入手机号"
+        border="{{false}}"
+        title-width='120px'
+        icon="arrow"
+        bindtap="amendPhone"
+        >
+      </van-field>
+    </view>
+
+    <!-- <view class="huiTiao"></view> -->
+
+    <!-- <view class="linefeed">
+      <text slot="button" class="myIcon iconfont iconfanghu"></text>   
+      <van-field
+        class="leftInput"
+        readonly
+        input-align="right"
+        model:value="{{usersafety}}"
+        type="text"
+        label="安全防护"
+        border="{{false}}"
+        title-width='120px'
+        icon="arrow"
+        bindtap='safety'
+        >
+      </van-field>
+    </view> -->
+
+    <view class="huiTiao"></view>
+
+    <view class="aboutStyle linefeed">
+      <text slot="button" class="myIcon iconfont iconguanyu"></text>   
+      <van-field
+        class="leftInput"
+        readonly
+        input-align="right"
+        model:value="{{sys_version}}"
+        type="text"
+        label="版本"
+        border="{{false}}"
+        title-width='120px'
+        >
+      </van-field>
+    </view>
+
+
+
+  </view>
+
+  <!--按钮-->
+  <!-- <view class="logout">
+    <button>退出登录</button>
+  </view> -->
+
+  <!--修改姓名弹窗  -->
+<modal hidden="{{hiddenmodalput}}" title="请输入姓名" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="getUserInfoName">
+    <van-field
+        clearable
+        class="leftInput"
+        input-align="left"
+        model:value="{{usernameTwo}}"
+        type="text"
+        placeholder="请填写姓名"
+        title-width='50px'
+        >
+      </van-field>
+</modal>
+
+<!--修改身份证弹窗 -->
+<modal hidden="{{hiddenmodalput2}}" title="请输入身份证号" confirm-text="确定" cancel-text="取消" bindcancel="cancel2" bindconfirm="getUserInfo2">
+    <van-field
+        clearable
+        class="leftInput"
+        input-align="left"
+        model:value="{{usercardTwo}}"
+        type="idcard"
+        placeholder="请填写身份证号"
+        title-width='50px'
+        >
+      </van-field>
+</modal>
+
+</view>
+
+<!-- 在页面内添加对应的节点 -->
+<van-toast id="van-toast" />

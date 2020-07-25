@@ -1,0 +1,102 @@
+<!--pages/quota/quota.wxml-->
+<view class="container" style="background-image:url({{urlImg}});background-size:100% 100%">
+  <cu-custom class="header-box" isBack="{{false}}">
+    <view slot="backText" style="color:#ffffff"></view>
+    <view slot="content" class="header-text" style="color:#ffffff">缴纳党费</view>
+  </cu-custom>
+
+  <view class="quotaContent">
+      <!--表单-->
+    <view class="registerFrom">
+      <form class="formContent" catchsubmit="formSubmit" catchreset="formReset">
+        <view class="page-section">
+         <van-cell-group>
+          <view class="fromcellMargin timeIcon">
+            <!-- <van-cell title="缴费日期" model:value="{{currentDate}}" is-link bind:click="showPopup" arrow-direction="down"/> -->
+            <van-field
+              readonly
+              style="width:100%"
+              label="月份："
+              model:value="{{currentDate}}"
+              type="text"
+              placeholder="请选择缴费日期"
+              border="{{ false }}"
+              title-width='50px'
+              bindtap="showPopup"
+              
+              >
+            </van-field>
+            <!-- <view class="leftIcon" bindtap="iconClick"><van-icon name="close" size="20px" /></view> -->
+          </view>
+
+          <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+              <van-datetime-picker
+                  type="year-month"
+                  formatter="{{ formatter }}"
+                  value="{{ showDate }}"
+                  max-date="{{maxDate}}"
+                  bind:confirm="confirmFn"
+                    bind:cancel="cancelFn"
+                />
+            </van-popup>
+
+          <view class="authCode fromcellMargin">
+            <van-field
+              model:value="{{ sms }}"
+              center
+              clearable
+              title-width='50px'
+              label="月薪："
+              placeholder="输入月薪(元)        最近一次薪资"
+              border="{{ false }}"
+              type="digit"
+              bind:change="usersmsChange"
+              use-button-slot>
+            </van-field>
+          </view>
+              
+        <!-- -->
+
+           <view class="authCode fromcellMargin jiaofei">
+            <van-field
+              model:value="{{ payment }}"
+              center
+              clearable
+               type="digit"
+              disabled="{{moneyReadonly}}"
+              label="党费："
+              placeholder="输入缴费金额"
+              border="{{ false }}"
+              title-width='50px'
+              style="background-color:red"
+              use-button-slot>
+            </van-field>
+            <van-button class="openInput" slot="button" size="small" type="primary" bind:click="xiugai">多交一点</van-button>
+          </view>
+          </van-cell-group>
+        </view>
+      </form>
+    </view>
+
+     <!--承诺书-->
+     <view class="section">
+        <textarea class="textarea" 
+        disabled
+         value="{{dangYuanText}}"
+         bindblur="bindTextAreaBlur" placeholder="自动变高"/>
+      </view>
+    <view class="registerLetter">
+      <van-checkbox  icon-size="16px" value="{{ checked }}" shape="square" bind:change="onChange" checked-color="#EE0A24">
+        <view>我已阅读并同意</view>
+      </van-checkbox>
+      <text bindtap="toletterBook" class="_a">《党员缴费承诺书》</text>
+    </view>
+
+    <!--注册按钮-->
+    <view class="zhuce">
+      <button class="customBtn" bindtap="registerTo" disabled="{{isdisabled}}">确认</button>
+    <!-- <view style="color:#666666;text-align:center">请认真填写真实数据，否则造成后果自行负责</view> -->
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,35 @@
+<!--pages/paydues/paydues.wxml-->
+<view class="container" style="background-image:url(http://www.zytdsj.com/images/WeChatImg/huodong/qdbg.png);background-size:100% 100%;">
+  <cu-custom class="header-box" isBack="{{false}}">
+    <view slot="backText" style="color:#ffffff"></view>
+    <view slot="content" class="header-text" style="color:#ffffff">缴纳党费</view>
+  </cu-custom>
+
+  <!--轮播-->
+  <view class="swiperFather">
+    <swiper
+    class="swiper-box"
+    bindchange="swiperChange"
+      indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" circular='{{circular}}' previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image class="swiper-item" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="swp-dot">
+      <view class="square-12 m-r-8 {{current === index ?'active': ''}}" wx:for="{{background}}" wx:key="{{index}}"></view>
+    </view>
+  </view>
+
+  <view class="containner-from">
+    <view class="btn-area margin-right">
+      <button bindtap="payduesTo">定额</button>
+    </view>
+    <view class="btn-area">
+      <button bindtap="loginClick">个人申报</button>
+    </view>
+  </view>
+
+</view>

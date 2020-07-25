@@ -1,0 +1,88 @@
+/* pages/quota/quota.wxss */
+.container {
+  min-height: 100vh;
+  background-size: cover;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+.cu-custom .cu-bar{
+  background-color: #E7222C;
+}
+
+.cuIcon-back{
+  color: #ffffff;
+}
+
+.cu-bar .action:first-child>text[class*="cuIcon-"]{
+  margin-right: 0;
+}
+
+.topTime{
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.topTime .van-cell{
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+/*表格样式*/
+.tableContent{
+  /* margin: 50rpx auto 0; */
+  width: 100%;
+}
+
+.tableContent-title{
+  width: 100%;
+  height: 80rpx;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.tableContent-title text{
+  width: 230rpx;
+  text-align: center;
+}
+
+.tableContent-table{
+  background-color: #ffffff;
+}
+
+.tableContent-li{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid #F0F0F0;
+}
+.tableContent-li text{
+  width: 230rpx;
+  text-align: center;
+}
+
+
+.zanwu{
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  height: 200rpx;
+  line-height: 200rpx;
+}
+
+.timeIcon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.leftIcon{
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+}

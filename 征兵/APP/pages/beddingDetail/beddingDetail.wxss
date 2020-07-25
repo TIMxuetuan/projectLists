@@ -1,0 +1,30 @@
+/* pages/specialtyDetail/specialtyDetail.wxss */
+.bl-panel{border: #eee solid 1px; padding: 0;  margin-bottom: 30rpx;}
+.panel-title{ 
+  margin-bottom: 0; padding:0 20rpx; background: #f8f8f8; border-bottom: #eee solid 1px;
+  font-size:32rpx; text-align: left; line-height: 70rpx;
+  display: flex;
+  align-items:center;
+  font-weight: bold;
+ }
+ .panel-title .end{ flex: 1; text-align: right; font-size: 26rpx;}
+.bl-pel11{
+  font-size:30rpx;
+  
+}
+.bl-pel11 .contant{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 30rpx;
+    border-bottom: #ddd solid 1px;
+    height:80rpx;
+  line-height:80rpx;
+}
+.bl-pel1{
+  word-break:break-all;
+}
+.bt{width:100%;}
+.container{
+  padding:20rpx;
+}

@@ -1,0 +1,100 @@
+/* pages/login/login.wxss */
+
+.container {
+  height: 100%;
+  padding: 30rpx;
+}
+.head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2e87cd;
+  height:300rpx;
+}
+.head-title{
+  margin-top:35rpx;
+  font-size:40rpx;
+  color:#FFF;
+  text-align: center;
+}
+
+.content,.codename{
+  width:100%;
+  margin-top:50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login-ip{
+  display:flex;
+  align-items: center;
+  border-bottom: 1rpx solid #e4e4e4;
+  width:100%;
+}
+.iconfont{
+  color:#2e87cd;
+  font-size:18px;
+  margin-right:30rpx;
+}
+.login-ip>input{
+  width:100%;
+  font-size: 16px;
+  height: 90rpx;
+  padding: 3 20rpx;  
+}
+.login-btn{
+  margin: 60rpx 0;
+  text-align: center;
+  width:100%;
+}
+.login-btn>button{
+  width:100%;
+  margin-top:50rpx;
+  height:100rpx;
+  line-height:100rpx;
+}
+.bt1{
+  background:#FFF;
+  color:#2e87cd;
+  border:1px solid #2e87cd;
+}
+.icon-mima2{
+  color:#2e87cd;
+}
+.jingzhun-bj{
+  width:150rpx;
+  height:150rpx;
+  text-align: center;
+  background-color:#FFF;
+  margin-top:30rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-jingzhun{
+  font-size:129rpx;
+  color:#fff;
+  margin:0;
+  width:100%;
+}
+.pass-code{
+  display: flex;
+  margin-top:50rpx;
+  padding:0;
+  
+}
+.bt2{
+  width:49%;
+  background:#FFF;
+  color:#2e87cd;
+  border:1px solid #ddd;
+  font-size:30rpx;
+  height:100rpx;
+  line-height:100rpx;
+}
+.bt{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+}

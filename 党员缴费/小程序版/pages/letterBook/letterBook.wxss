@@ -1,0 +1,25 @@
+/* pages/letterBook/letterBook.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+page{
+  background-color: #fff;
+}
+
+.textcontent{
+  margin-top: 20rpx;
+}
+
+.textTitle{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.textContainer{
+  padding: 0 20rpx;
+}
+
+.wxParse-p{
+  text-indent:2em;
+  text-align:justify;
+}

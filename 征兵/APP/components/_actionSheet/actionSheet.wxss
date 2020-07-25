@@ -1,0 +1,17 @@
+@import "../../iconfont/iconfont.wxss";
+:host{ font-size: 32rpx;}
+.actionSheet{ 
+  position: fixed; left: 0; right: 0; bottom: 0;  z-index: 901;
+  background: #fff; border-radius: 6px 6px 0 0;
+  }
+.as-head{
+  display: flex;
+  border-bottom: #eee solid 1px;
+ }
+.as-title{line-height: 80rpx; flex: 1; padding-left: 26rpx; font-size: 32rpx; }
+.as-close{line-height: 80rpx; width: 80rpx; font-size: 36rpx; text-align: center; color: #999;}
+.as-content{ box-sizing: border-box;}
+
+.as-mask{
+   position: fixed; left: 0; right: 0; bottom: 0; top: 0; z-index: 900;
+   background-color:rgba(0,0,0,0.2)}

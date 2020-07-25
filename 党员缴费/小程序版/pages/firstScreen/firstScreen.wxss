@@ -1,0 +1,24 @@
+/* pages/firstScreen/firstScreen.wxss */
+.lodingCenter{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 150rpx auto;
+}
+
+.lodingCenter image{
+  margin-bottom: 20rpx;
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.lodingText{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+
+  

@@ -1,0 +1,17 @@
+/*
+ * _functions v0.10
+ * 效率大师
+ */
+
+/*
+vw = 100/页面设计稿宽度(px)*局部节点设计宽度(px)
+宽度(vw) =  100 / 1920 * 100;
+高度(vh) = 100 / 1080 * 40;
+*/
+@function vw($PageDesignWidth, $domSize) {
+  @return (100 / $PageDesignWidth * $domSize) + vw;
+}
+@function vh($PageDesignHeight, $domHeight) {
+  @return (100 / $PageDesignHeight * $domHeight) + vh;
+}
+

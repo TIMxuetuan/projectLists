@@ -1,0 +1,5 @@
+<!--pages/my/my.wxml-->
+<mp-cells ext-class="my-cells" >
+    <mp-cell link url="/pages/login/login" value="退出登录" >
+    </mp-cell>
+</mp-cells>

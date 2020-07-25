@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 轮播图 -->
+   <!-- <view class="page-section swiper">
+      <swiper indicator-dots="{{true}}"
+      circular="{{true}}"
+        autoplay="{{true}}" interval="3000" duration="500" >
+        <block wx:for="{{images}}" wx:key="index">
+          <swiper-item>
+            <image class="swiper-img" mode="aspectFill" src="{{item.path}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view> -->
+  <!-- 菜单 -->
+  <!-- <view class="menu">
+    <view class="menu__item">
+      <view class="iconicon_jiaofeijilu-copy"></view>
+      <text>党员缴费</text>
+    </view>
+    <view class="menu__item">
+      <view class="iconpeizhitubiaosvg-"></view>
+      <text>历史缴费情况</text>
+    </view>
+  </view> -->
+  <view class="panel"  data-url="/pages/payCost/payCost" bindtap="jumpTo">  
+    <view class="left">
+      <view class="iconicon_jiaofeijilu-copy"></view>
+      <text>党员缴费</text>
+    </view>
+    <view class="right">
+      <text>立即缴费</text>
+      <view class="iconright"></view>
+    </view>
+  </view>
+  <view class="panel" data-url="/pages/payCostHistory/payCostHistory" bindtap="jumpTo">  
+    <view class="left">
+      <view class="iconpeizhitubiaosvg-"></view>
+      <text>历史缴费</text>
+    </view>
+    <view class="right">
+      <text>查看</text>
+      <view class="iconright"></view>
+    </view>
+  </view>
+</view>

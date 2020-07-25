@@ -1,0 +1,8 @@
+/**app.wxss**/
+/* weui 样式 */
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+/* 引入字体图标 */
+@import '/static/iconfont/iconfont.wxss'
+
+/* 公用样式 */

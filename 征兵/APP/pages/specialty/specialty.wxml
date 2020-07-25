@@ -1,0 +1,10 @@
+<view class="container">
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+      <text class="checkbox1">{{item.value}}</text>
+    </label>
+  </checkbox-group>
+
+  <button class="bt" bindtap='goInfo'>保存</button>
+</view>

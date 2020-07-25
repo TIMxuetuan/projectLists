@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/firstScreen/firstScreen",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/registerNext/registerNext",
+    "pages/my/my",
+    "pages/paymentHistory/paymentHistory",
+    "pages/quota/quota",
+    "pages/login/login",
+    "pages/paydues/paydues",
+    "pages/amendPhone/amendPhone",
+    "pages/safety/safety",
+    "pages/setPassword/setPassword",
+    "pages/phoneVerify/phoneVerify",
+    "pages/changePassword/changePassword",
+    "pages/letterBook/letterBook"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "/images/tabbar/shouye-active.png",
+        "iconPath": "/images/tabbar/shouye.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/jiaona-active.png",
+        "iconPath": "/images/tabbar/jiaona.png",
+        "pagePath": "pages/quota/quota",
+        "text": "缴纳党费"
+      },
+      {
+        "selectedIconPath": "images/tabbar/wode-active.png",
+        "iconPath": "images/tabbar/wode.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ],
+    "color": "#666666",
+    "backgroundColor": "#fff",
+    "selectedColor": "#F22424"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

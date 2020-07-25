@@ -1,0 +1,63 @@
+<view class="container">
+  <view class="border-list">
+    <view class="item">
+    <view class='label'>帽子:</view>
+      <view class='input-box'>
+        <picker bindchange="bindPickerHat" mode="selector" value="{{hat_index}}" range="{{hatArry}}" range-key="name">
+          <view class="picker">
+            <input placeholder="请选择帽子大小*" disabled value="{{hat_name}}" />
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="item">
+    <view class='label'>衣服:</view>
+      <view class='input-box'>
+        <picker bindchange="bindPickerClothes" mode="selector" value="{{clothesindex}}" range="{{clothesArray}}" range-key="name">
+          <view class="picker">
+            <input placeholder="请选择衣服大小*" disabled value="{{clothes_name}}" />
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="item">
+    <view class='label'>鞋子:</view>
+      <view class='input-box'>
+        <picker bindchange="bindPickerShoes" mode="selector" value="{{shoes_index}}" range="{{shoesArray}}" range-key="name">
+          <view class="picker">
+            <input placeholder="请选择鞋子大小*" disabled value="{{shoes_name}}" />
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="register-btn">
+    <button class="bt bt1" bindtap="goBedding">保存</button>
+  </view>
+
+  <view class="consult">
+      <view class="consult-title">参考信息!!!</view> 
+      <view class="consult-contant">
+          <view class="yifu"> 
+            
+            <view>1、帽子信息示例“54” （头围54厘米）</view>
+          </view>
+          <view class="yifu">
+            
+            <view>2、衣服信息示例“165/92/80”,（身高/胸围/腰围，单位cm）,</view>
+          </view>
+          <view class="yifu">
+            
+            <view>3、鞋子信息示例“235/37” （脚长(mm)/码号）</view>
+          </view>
+           <view class="detailed" bindtap='detailed'>详细信息>></view>
+      </view>
+
+     
+  </view>
+
+</view>

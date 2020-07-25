@@ -1,0 +1,43 @@
+
+<view class="container">
+
+  <view class="border-list">
+
+  <view class="item">
+      <view class='label'>奖惩名称:</view>
+      <view class='input-box'>
+        <input id='model.pi_name_rp' name="model.pi_name_rp" placeholder="请填写奖惩名称" value="{{model.pi_name_rp}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>奖惩时间:</view>
+      <view class='input-box'>
+        <picker mode="date" value="{{model.pi_time_rp}}" start="{{curDate}}" data-field='pi_time_rp' bindchange="bindDateChange">
+          <view class="picker">
+            <input placeholder="主要奖惩时间" value="{{model.pi_time_rp}}" disabled bindinput='bindKeyInput' />
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>奖惩单位:</view>
+      <view class='input-box'>
+        <input id='model.pi_unit_rp' name="model.pi_unit_rp" placeholder="请填写奖惩单位" value="{{model.pi_unit_rp}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>奖惩原因:</view>
+      <view class='input-box'>
+        <input id='model.pi_reasons_rp' name="model.pi_reasons_rp" placeholder="请填写奖惩原因" value="{{model.pi_reasons_rp}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+  </view> 
+
+  <view class="exp-button">
+    <button bindtap="onSubmit" class="bt">保存</button>
+  </view>
+ 
+</view>

@@ -1,0 +1,26 @@
+/* pages/login/login.wxss */
+.check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+}
+.rule{
+    color: #576b95;
+}
+
+
+.check checkbox{
+    transform: scale(.7);
+}
+
+checkbox-group{
+    display: flex;
+    align-items: center;
+}
+.btn-wrap{
+    /* width: 100%;
+    background-color: blue; */
+}
+
+

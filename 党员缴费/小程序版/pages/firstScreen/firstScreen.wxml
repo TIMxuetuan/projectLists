@@ -1,0 +1,29 @@
+<!--pages/firstScreen/firstScreen.wxml-->
+<view>
+  <cu-custom class="header-box" isBack="{{false}}">
+    <view slot="backText"></view>
+    <view slot="content" class="header-text" style="color:#000"></view>
+  </cu-custom>
+
+<view class="lodingCenter">
+    <view>
+      <image src="../../images/imgIcon.png"></image>
+    </view>
+
+      <view class="lodingText">
+      <!--欢迎进入河南中原文化发展中心-->
+        数据加载中
+      </view>
+
+      <view class="page" data-weui-theme="{{theme}}">
+        <view class="page__bd">
+          <view class="weui-loading__wrp">
+              <view class="loading wx_dot_loading"></view>
+          </view>
+        </view>
+      </view>
+
+</view> 
+  
+
+</view>

@@ -1,0 +1,57 @@
+/* pages/bedding/bedding.wxss */
+.container{
+  padding:20rpx;
+}
+.border-list {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20rpx;
+}
+.border-list .item {
+  display: flex;
+  align-items: center;
+  padding: 0 16rpx;
+  border-bottom: #ddd solid 1px;
+}
+.label {
+  width: 150rpx;
+  font-size: 28rpx;
+}
+.border-list .input-box{
+  flex:1;
+}
+.border-list .input-box input{
+  text-align:right;
+  font-size:13px;
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+}
+.bt1{
+  width:100%;
+}
+.body-view-text{
+  font-size:27rpx;
+}
+.body-view{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.consult{
+  margin-top:30rpx;
+  /* background: #78c4ec */
+}
+.consult-title{
+   padding:0 20rpx; background: #92ffeb; 
+  font-size:32rpx; text-align: left; line-height: 80rpx;
+  font-weight: bold;
+}
+.consult-contant{
+ padding:10rpx 30rpx 30rpx  30rpx;
+ background: #92ffeb
+}
+.yifu{
+  margin-top:20rpx;
+  font-size:30rpx;
+}

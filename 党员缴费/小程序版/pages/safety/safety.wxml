@@ -1,0 +1,49 @@
+<!--pages/quota/quota.wxml-->
+<view class="oneViewStyle">
+  <image class='header-bg' src = '{{urlImg}}'></image>
+<view class="container">
+  <cu-custom class="header-box" isBack="{{true}}">
+    <view slot="backText" style="color:#ffffff">返回</view>
+    <view slot="content" class="header-text" style="color:#ffffff">安全防护</view>
+  </cu-custom>
+
+  <!--我的内容-->
+  <view class="myContent">
+    <view class="myContent-li">
+      <van-cell
+        is-link
+        title="设置密码"
+        link-type="navigateTo"
+        url="/pages/setPassword/setPassword?userphone={{userphone}}"
+      />
+     </view>
+
+    <view class="myContent-li">
+       <van-cell
+        is-link
+        title="修改密码"
+        link-type="navigateTo"
+        url="/pages/phoneVerify/phoneVerify?userphone={{userphone}}"
+      />
+    </view>
+
+    <!-- <view class="myContent-li">
+       <van-cell
+        is-link
+        title="指纹登陆"
+        link-type="navigateTo"
+      />
+    </view>
+
+    <view class="myContent-li">
+       <van-cell
+        is-link
+        title="面部识别"
+        link-type="navigateTo"
+      />
+    </view> -->
+
+  </view>
+
+</view>
+</view>

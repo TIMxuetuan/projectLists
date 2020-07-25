@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/rewards/rewards",
+    "pages/bedding/bedding",
+    "pages/specialty/specialty",
+    "pages/experience/experience",
+    "pages/register/register",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/specialtyDetail/specialtyDetail",
+    "pages/password/password",
+    "pages/family/family",
+    "pages/sociology/sociology",
+    "pages/experienceDeatil/experienceDeatil",
+    "pages/rewardsDetail/rewardsDetail",
+    "pages/familyDetail/familyDetail",
+    "pages/sociologyDetail/sociologyDetail",
+    "pages/school/school",
+    "pages/schoolDetail/schoolDetail",
+    "pages/email/email",
+    "pages/emailDetail/emailDetail",
+    "pages/intention/intention",
+    "pages/intentionDetail/intentionDetail",
+    "pages/beddingDetail/beddingDetail",
+    "pages/detailed/detailed",
+    "pages/upHead/upHead",
+    "pages/cutInside/cutInside"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2e87cd",
+    "navigationBarTitleText": "征兵",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#2e87cd",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_s.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/head.png",
+        "selectedIconPath": "images/head_s.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

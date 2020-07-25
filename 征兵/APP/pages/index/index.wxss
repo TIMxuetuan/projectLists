@@ -1,0 +1,123 @@
+jump /**index.wxss**/
+page {
+  background: #f1f1f1;
+}
+.certificates {
+  text-align: center;
+  margin:20rpx 0;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.shoot-p{
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx;
+  position: relative;
+  z-index:11;
+}
+.introduce{
+  font-size:20rpx;
+  display:flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  margin-left:20rpx;
+}
+.introduce text{
+  width:100%;
+  text-align: left;
+  line-height: 2.2;
+}
+.logo-border{
+  border:1px solid #a8a8a8;
+  width:200rpx;
+  height:250rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  background-color:rgba(0,0,0,0.3);
+}
+.logo-border view{
+    position:absolute;
+    top:81%;
+    font-size:20rpx;
+    z-index:888;
+    color:#fff;
+    width:200rpx;
+    height:50rpx;
+    line-height:50rpx;
+    background-color:rgba(0,0,0,0.3);
+}
+.logo-border .image1{
+  width:200rpx;
+  height:250rpx;
+  z-index: 2
+}
+.logo-border .image2{
+  position:absolute;
+  left:0;
+  top:0;
+  width:200rpx;
+  height:250rpx;
+  z-index: 1
+}
+.signl{font-size:50px;color:#000}
+.logo{margin:0 10rpx 10rpx 0;}
+.qr_card{
+  width:100%;
+}
+.qr_card view{
+  border:1px solid #2e87cd;
+  line-height:50rpx;
+  display: block;
+  background-color:#f4f4f4;
+}
+.qr_card view:hover{
+  background-color:#dfdfdf;
+}
+
+
+
+.jump {
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  background: #fff;
+}
+
+.item {
+  border-top: #eee solid 1px;
+  height: 140rpx;
+  line-height: 140rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconfont {
+  color: #2e87cd;
+  margin-right: 20rpx;
+  font-size: 46rpx;
+}
+.icon-banshichu2{
+  font-size:52rpx;
+  margin-left:4rpx;
+}
+.iconfont1{
+  margin-left:8rpx;
+  font-size:44rpx;
+}
+.icon-jiaoyujingli{
+  font-size:40rpx;
+}
+.icon-jiangcheng{
+  font-size:42rpx;
+}
+.end{ flex: 1; text-align: right; font-size: 32rpx; color:#000; margin-left:20rpx;}
+.icon-shehuiguanxi{
+  font-size:43rpx;
+}
+.icon-beizhuang{
+  font-size:53rpx;
+}

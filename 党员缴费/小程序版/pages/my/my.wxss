@@ -1,0 +1,149 @@
+.container {
+  min-height: 100vh;
+  background-size: cover;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #EFEDF0;
+}
+
+.cu-custom{
+  background-color: #E7222C;
+}
+
+.cuIcon-back{
+  color: #ffffff;
+}
+
+/*头像*/
+.myHeadPhoto{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 50rpx 32rpx;
+}
+
+.userAvatarUrlSize{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 32rpx 0 0;
+}
+
+.myHeadPhoto-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.myHeadPhoto-name{
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.myHeadPhoto-dang{
+  font-size: 16px;
+  color: #666;
+}
+/*我的内容*/
+.myContent{
+  width: 100%;
+}
+
+.myContent-li{
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.linefeed{
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  background-color: #fff;
+  padding-left: 20rpx;
+}
+
+.iconfont{
+  width: 50rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.leftInput{
+  width: 100%;
+}
+
+.linefeed .van-cell{
+  padding: 20rpx 32rpx 20rpx 10rpx;
+}
+
+.myContent .van-field__input{
+  color: #777777;
+  margin-right: 4rpx;
+}
+
+.aboutStyle .van-field__input{
+  padding-right: 50rpx;
+}
+
+.sexStyle .van-field__input{
+  text-align: right;
+
+}
+
+/*退出*/
+.logout{
+  margin-top: 50rpx;
+}
+.logout button{
+  width: 530rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #E7222C;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.huiTiao{
+  width: 100%;
+  height: 20rpx;
+  background-color: #EFEDF0;
+}
+
+/*修改姓名弹窗*/
+.setName .van-cell{
+  /* border: 1px solid #666; */
+}
+
+/*icon类*/
+.myIcon{
+  font-size: 18px;
+  color: #006CD2;
+}
+.iconxingming1{
+  content: "\e600";
+}
+
+.iconxingbie---{
+  content: "\e604";
+}
+
+.iconshenfenzhenghao{
+  content: "\e624";
+}
+
+.iconshoujihao{
+  content: "\e61a";
+}
+
+.iconfanghu{
+  content: "\e62b";
+}
+
+.iconguanyu{
+  content: "\e608";
+}
+

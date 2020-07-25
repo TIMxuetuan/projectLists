@@ -1,0 +1,20 @@
+<view class="container">
+
+  <view class="from-li">
+    <view class="input-box">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" >
+        <view class="picker">
+          <input placeholder="请选择所在地区*" disabled value="{{isHide?region:school_location}}" bindinput='bindKeyInput'></input>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="from-li">
+      <view class='input-box'>
+        <input placeholder="请输入学校名称*" id="model.school" name='model.school' value="{{model.school}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+    <view class="register-btn">
+          <button class="bt" bindtap="goSchool">保存</button>
+        </view>
+</view>

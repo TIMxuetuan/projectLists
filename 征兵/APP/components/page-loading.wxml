@@ -1,0 +1,6 @@
+<view class="page-loading" wx:if="{{loadingPages}}">
+    <view> 
+      <view><image src='/images/loading2.gif' class='page-loading-image-loading'></image></view>
+      <image  class='page-loading-image'></image>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<!--components/tabbar/tabbar.wxml-->
+<scroll-view scroll-y="false" scroll-x="true" class='tabbar-nav'>
+  <view class='tabbar-nav-inner'>
+
+    <!--<view class="item {{typeid==pClass.id ? 'active' : ''}}">
+      <view bindtap='navTap' data-index="-1" class='navigator'>全部</view>
+    </view>-->
+    
+    <view wx:for="{{subtopic}}" wx:for-index="index" wx:for-item="item" wx:key='item.id' 
+      class="item {{typeid==item.id ? 'active' : ''}}">
+        <view bindtap='navTap' data-index="{{index}}" class='navigator'>
+          {{item.typename}}
+        </view>
+    </view>
+  </view>
+</scroll-view>

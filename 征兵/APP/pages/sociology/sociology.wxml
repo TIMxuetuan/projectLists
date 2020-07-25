@@ -1,0 +1,42 @@
+<view class="container">
+
+  <view class="border-list">
+
+    <view class="item">
+      <view class='label'>称谓:</view>
+      <view class='input-box'>
+        <picker bindchange="bindPickerChangeType" mode="selector" value="{{fam_index}}" range="{{typeArray}}" range-key="name">
+          <view class="picker">
+            <input placeholder="请选择称谓" disabled value="{{fam_name}}" />
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>姓名:</view>
+      <view class='input-box'>
+        <input id='model.pi_fullName_mm' name="model.pi_fullName_mm" placeholder="请填写姓名" value="{{model.pi_fullName_mm}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>身份证号:</view>
+      <view class='input-box'>
+        <input id='model.pi_IDNumber_mm' name="model.pi_IDNumber_mm" placeholder="请填写身份证号" type='idcard' value="{{model.pi_IDNumber_mm}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+
+    <view class="item">
+      <view class='label'>工作单位及职务:</view>
+      <view class='input-box'>
+        <input id='model.pi_unitPosition_mm' name="model.pi_unitPosition_mm" placeholder="请填写工作单位及职务" value="{{model.pi_unitPosition_mm}}" bindinput='bindKeyInput' />
+      </view>
+    </view>
+  </view>
+
+  <view class="exp-button">
+    <button bindtap="onSubmit" class="bt">保存</button>
+  </view>
+
+</view>

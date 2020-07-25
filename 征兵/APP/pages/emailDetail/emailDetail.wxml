@@ -1,0 +1,34 @@
+<view class="container">
+
+  <view class="from-li">
+    <view class="input-box">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <view class="picker">
+          <input placeholder="请选择邮寄地址*" disabled value="{{isHide?region:address}}" bindinput='bindKeyInput'></input>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="from-li">
+    <view class='input-box'>
+      <input placeholder="请输入详细地址*" id="send" name='send' value="{{send}}" bindinput='bindKeyInput' />
+    </view>
+  </view>
+
+  <view class="from-li">
+    <view class='input-box'>
+      <input placeholder="请输入联系人电话*" id="send_phone" name='send_phone' type='number' value="{{send_phone}}" bindinput='bindKeyInput' />
+    </view>
+  </view>
+
+  <view class="from-li">
+    <view class='input-box'>
+      <input placeholder="请输入联系人姓名*" id="send_name" name='send_name' value="{{send_name}}" bindinput='bindKeyInput' />
+    </view>
+  </view>
+
+  <view class="register-btn">
+    <button class="bt" bindtap="goToInfo">保存</button>
+  </view>
+</view>
