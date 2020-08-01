@@ -1,0 +1,157 @@
+@import '../uni.scss';
+/* 订单公用样式*/
+.header {
+	background-color: #4779F2;
+	padding: 36rpx;
+	color: #fff;
+	fon-size: 14px;
+	text-align: left;
+}
+.iconcoordinates_fill{
+	font-size:16px;
+}
+.loca {
+	background-color: #fff;
+	margin-top: 12rpx;
+	padding: 20rpx 38rpx;
+	&-header{
+		display: flex;
+		font-size: 16px;
+		color: #000;
+		font-weight:400;
+		opacity:1;
+	}
+	&-text{
+		margin-right:20rpx;
+	}
+	&-detail {
+		margin-top: 20rpx;
+		color:rgba(90,90,90,0.70);
+		font-size: 15px;
+	}
+}
+
+.information {
+	margin-top: 12rpx;
+	padding: 30rpx 38rpx;
+	background-color: #fff;
+	&-name {
+		font-weight:400;
+		font-size: 16px;
+		color: #000;
+	}
+
+	&-content {
+		margin-top: 40rpx;
+		display: flex;
+		image {
+			width: 180rpx;
+			height: 180rpx;
+		}
+	}
+
+	&-detail {
+		margin-left: 18rpx;
+		opacity:1;
+		font-weight:400;
+		font-size:12px;
+		font-family:Source Han Sans CN;
+	}
+
+	&-title {
+		color: #000;
+	}
+
+	&-price {
+		color:rgba(90,90,90,0.70);
+		margin-top: 20rpx;
+	}
+
+	&-number {
+		margin-top: 48rpx;
+		color:rgba(90,90,90,0.70);
+	}
+}
+
+.plane-group {
+	margin-top: 20rpx;
+	.plane{
+		margin-top: 20rpx;
+		display: flex;
+		justify-content: space-between;
+		color:rgba(90,90,90,0.55);
+		font-weight:400;
+		font-size:12px;
+		opacity:1;
+	}
+}
+
+.matter {
+	margin-top: 12rpx;
+	background-color: #fff;
+	padding: 20rpx 38rpx;
+	.matter-name{
+		font-size: 16px;
+		color: #000;
+		font-weight:400;
+	}
+	.plane-content{
+		margin-top: 20rpx;
+	}
+	.plane {
+		margin-top: 20rpx;
+		display: flex;
+		font-size: 14px;
+		font-weight:400;
+		&-left {
+			color:rgba(90,90,90,0.70);
+		}
+		&-right {
+			text-overflow:ellipsis;
+			word-wrap:break-word;
+			color: #444444;
+		}
+	}
+	
+
+}
+.lyMatter{
+	.ly-plane{
+		padding-bottom: 20rpx;
+		border-bottom: 1px solid #A7A7A7;
+	}
+}
+/*页面底部浮动*/
+.footer-fix{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		height:82rpx;
+		line-height:82rpx;
+		font-size:14px;
+		font-family:Source Han Sans CN;
+		font-weight:400;
+		color:rgba(68,68,68,1);
+		opacity:1;
+	}
+/*表单样式*/
+
+.four-set{
+		padding:0 38rpx;
+		background-color: #FFFFFF;
+	}
+	.four-set-item{
+		display: flex;
+		justify-content: space-between;
+		height: 100rpx;
+		line-height: 100rpx;
+		border-bottom: 1px solid rgba(167,167,167,0.5);
+		color: #444444;
+		font-size:14px;
+	}
+	.four-set-item:last-child{
+		border-bottom: none;
+		
+	}

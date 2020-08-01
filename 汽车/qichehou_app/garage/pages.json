@@ -1,0 +1,261 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle":"custom",
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationStyle":"custom",
+				"navigationBarTitleText": "我的"
+			}
+		}, {
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/forgetPassword/forgetPassword",
+			"style": {
+				"navigationBarTitleText": "忘记密码"
+			}
+		}, {
+			"path": "pages/classify/classify",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		}, {
+			"path": "pages/shoppingCart/shoppingCart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		}, {
+			"path": "pages/newsFile/news/news",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		}
+	    ,{
+            "path" : "pages/newsFile/newsDetails/newsDetails",
+            "style" : {
+				"navigationBarTitleText": "系统通知"
+			}
+        }
+        ,{
+            "path" : "pages/my/myWallet/myWallet",
+            "style" : {
+				"navigationBarTitleText": "我的钱包"
+			}
+        }
+        ,{
+            "path" : "pages/my/addBankCard/addBankCard",
+            "style" : {
+				"navigationBarTitleText": "添加银行卡"
+			}
+        }
+        ,{
+            "path" : "pages/my/verifyCardMessage/verifyCardMessage",
+            "style" : {
+				"navigationBarTitleText": "验证银行卡信息"
+			}
+        }
+        ,{
+            "path" : "pages/my/phoneAuthCode/phoneAuthCode",
+            "style" : {
+				"navigationBarTitleText": "手机短信验证"
+			}
+        }
+        ,{
+            "path" : "pages/my/bankCards/bankCards",
+            "style" : {
+				"navigationBarTitleText": "银行卡"
+			}
+        }
+        ,{
+            "path" : "pages/my/balance/balance",
+            "style" : {
+				"navigationBarTitleText": "余额"
+			}
+        }
+        ,{
+            "path" : "pages/my/balanceWithdrawal/balanceWithdrawal",
+            "style" : {
+				"navigationBarTitleText": "余额提现"
+			}
+        }
+        ,{
+            "path" : "pages/my/showResult/showResult",
+            "style" : {
+				"navigationBarTitleText": "提现结果"
+			}
+        }
+        ,{
+            "path" : "pages/system/systemSetup/systemSetup",
+            "style" : {
+				"navigationBarTitleText": "系统设置"
+			}
+        }
+        ,{
+            "path" : "pages/system/changePassword/changePassword",
+            "style" : {
+				"navigationBarTitleText": "修改密码"
+			}
+        }
+        ,{
+            "path" : "pages/system/bindingNewPhone/bindingNewPhone",
+            "style" : {
+				"navigationBarTitleText": "绑定新手机"
+			}
+        }
+        ,{
+            "path" : "pages/system/changePayPassword/changePayPassword",
+            "style" : {
+				"navigationBarTitleText": "设置/修改支付密码"
+			}
+        }
+        ,{
+            "path" : "pages/system/setNewPayPassword/setNewPayPassword",
+            "style" : {
+				"navigationBarTitleText": "设置/修改支付密码"
+			}
+        }
+        ,{
+            "path" : "pages/system/versionUpdating/versionUpdating",
+            "style" : {
+				"navigationBarTitleText": "版本更新"
+			}
+        }
+        ,{
+            "path" : "pages/my/aboutUs/aboutUs",
+            "style" : {
+				"navigationBarTitleText": "关于我们"
+			}
+        }
+        ,{
+            "path" : "pages/my/helpCenter/helpCenter",
+            "style" : {
+				"navigationBarTitleText": "帮助中心"
+			}
+        }
+        ,{
+            "path" : "pages/my/commonIssue/commonIssue",
+            "style" : {
+				"navigationBarTitleText": "常见问题"
+			}
+        }
+        ,{
+            "path" : "pages/orderForm/myOrderForm/myOrderForm",
+            "style" : {
+				"navigationBarTitleText": "我的订单"
+			}
+        }
+        ,{
+            "path" : "pages/orderForm/orderDetails/orderDetails",
+            "style" : {
+				"navigationBarTitleText": "订单详情"
+			}
+        }
+        ,{
+            "path" : "pages/product/submitOrders/submitOrders",
+            "style" : {
+				"navigationBarTitleText": "提交订单"
+			}
+        }
+        ,{
+            "path" : "pages/product/shippingAddress/shippingAddress",
+            "style" : {
+				"navigationBarTitleText": "收货地址"
+			}
+        }
+        ,{
+            "path" : "pages/product/addAddress/addAddress",
+            "style" : {
+				"navigationBarTitleText": "新增收货地址"
+			}
+        }
+        ,{
+            "path" : "pages/orderForm/applyAfter",
+            "style" : {
+				"navigationBarTitleText": "申请售后"
+			}
+        }
+        ,{
+            "path" : "pages/product/payWay",
+            "style" : {
+				"navigationStyle":"custom"
+			}
+        }
+        ,{
+            "path" : "pages/product/payResult",
+            "style" : {
+				"navigationBarTitleText": "支付结果"
+			}
+        }
+        ,{
+            "path" : "pages/product/productsSort",
+            "style" : {
+				"navigationBarTitleText": "商品类别"
+			}
+        }
+        ,{
+            "path" : "pages/product/productsDetails",
+            "style" : {
+				"navigationBarTitleText": "商品详情"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#ffffff"
+	},
+	"tabBar": {
+		"backgroundColor": "#fff",
+		"color": "#8F8F94",
+		"selectedColor": "#E7222C",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/img/tabbar/index.png",
+				"selectedIconPath": "static/img/tabbar/index-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/classify/classify",
+				"iconPath": "static/img/tabbar/classify.png",
+				"selectedIconPath": "static/img/tabbar/classify-active.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/shoppingCart/shoppingCart",
+				"iconPath": "static/img/tabbar/shoppingCart.png",
+				"selectedIconPath": "static/img/tabbar/shoppingCart-active.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/newsFile/news/news",
+				"iconPath": "static/img/tabbar/news.png",
+				"selectedIconPath": "static/img/tabbar/news-active.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/img/tabbar/my.png",
+				"selectedIconPath": "static/img/tabbar/my-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}

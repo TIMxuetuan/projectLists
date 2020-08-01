@@ -1,0 +1,104 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle":"custom",
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}, {
+			"path": "pages/my/setting/setting",
+			"style": {
+				"navigationBarTitleText": "系统设置"
+			}
+		}, {
+			"path": "pages/submitFrom/submitFrom",
+			"style": {
+				"navigationBarTitleText": "表单提交"
+			}
+		}
+
+		, {
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},{
+			"path": "pages/register/authentication",
+			"style": {
+				"navigationBarTitleText": "认证"
+			}
+		},{
+			"path": "pages/register/margin",
+			"style": {
+				"navigationBarTitleText": "缴纳保证金"
+			}
+		}, {
+			"path": "pages/forgetPassword/forgetPassword",
+			"style": {
+				"navigationBarTitleText": "忘记密码"
+			}
+		}, {
+			"path": "pages/newsFile/news/news",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		}
+        ,{
+            "path" : "pages/my/setting/editPassword/editPassword",
+            "style" : {"navigationBarTitleText": "修改密码"}
+        }
+        ,{
+            "path" : "pages/my/setting/editPhone/editPhone",
+            "style" : {"navigationBarTitleText": "绑定手机号"}
+        }
+        ,{
+            "path" : "pages/register/authResult",
+            "style" : {"navigationBarTitleText": "认证结果"}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "驰骋天下",
+		"navigationBarBackgroundColor": "#EF744D",
+		"backgroundColor": "#ffffff"
+	},
+	"tabBar": {
+		"backgroundColor": "#fff",
+		"color": "#8F8F94",
+		"selectedColor": "#E7222C",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/img/tabbar/index.png",
+				"selectedIconPath": "static/img/tabbar/index-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/newsFile/news/news",
+				"iconPath": "static/img/tabbar/news.png",
+				"selectedIconPath": "static/img/tabbar/news-active.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/img/tabbar/my.png",
+				"selectedIconPath": "static/img/tabbar/my-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}
