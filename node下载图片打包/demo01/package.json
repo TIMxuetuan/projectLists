@@ -16,6 +16,6 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "jszip": "^3.4.0"
+    "jszip": "^3.7.0"
   }
 }
